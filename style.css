@@ -19,63 +19,16 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 400px;
+    width: 500px;
     height: 400px;
     position: relative;
 }
 
-/* Common flower styles */
-.flower {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    margin: 10px;
-}
-
-/* Petal structure */
-.petal {
-    width: 80px;
-    height: 100px;
-    background: radial-gradient(circle at 30% 30%, #ffffff, #ff6666); /* Default gradient for petals */
-    position: absolute;
-    border-radius: 50%;
-}
-
-.petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
-.petal:nth-child(2) { transform: rotate(72deg) translateY(-40px); }
-.petal:nth-child(3) { transform: rotate(144deg) translateY(-40px); }
-.petal:nth-child(4) { transform: rotate(216deg) translateY(-40px); }
-
-/* Color variations for the flowers */
-.purple .petal {
-    background: radial-gradient(circle at 30% 30%, #d8bfd8, #9400d3);
-}
-.navy .petal {
-    background: radial-gradient(circle at 30% 30%, #000080, #002366);
-}
-.pink .petal {
-    background: radial-gradient(circle at 30% 30%, #ff99cc, #ff66b2);
-}
-.yellow .petal {
-    background: radial-gradient(circle at 30% 30%, #ffeb3b, #ffdd00);
-}
-
-/* Flower center */
-.center {
-    width: 30px;
-    height: 30px;
-    background-color: #ff1493;
-    border-radius: 50%;
-    position: absolute;
-    top: 35px;
-    left: 35px;
-}
-
-/* Letter inside the bouquet */
+/* Letter styling */
 .letter-inside {
     position: absolute;
-    top: 140px;
-    left: 120px;
+    top: 150px;
+    left: 180px;
     cursor: pointer;
 }
 
@@ -110,26 +63,15 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Georgia', serif;
-    max-height: 500px;
-    overflow-y: auto;
+    max-height: 400px;
+    overflow-y: auto; /* Allows scrolling for longer content */
 }
 
 .message.show {
     display: block;
 }
 
-/* Zoom effect for the letter */
+/* Add zoom effect on the letter */
 .letter.zoom {
     transform: scale(1.2);
-}
-
-/* Bouquet Wrapping */
-.bouquet-wrap {
-    position: absolute;
-    bottom: -40px;
-    width: 400px;
-    height: 150px;
-    background: linear-gradient(135deg, #d8bfd8, #8a2be2);
-    border-radius: 50%;
-    z-index: -1;
 }
