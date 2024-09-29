@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Improved Flower Bouquet</title>
+    <title>Natural Flower Bouquet</title>
     <style>
         body {
             background-color: #f0f0f0;
@@ -124,102 +124,102 @@
             </p>
         </div>
 
-        <!-- 3D Realistic Rose Bouquet using SVG -->
+        <!-- 3D Natural Rose Bouquet using SVG -->
         <svg class="rose-bouquet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600">
             <!-- Create gradients for petals and stems -->
             <defs>
-                <!-- Red gradient for rose petals -->
-                <radialGradient id="roseGradientRed3D" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,100,100);stop-opacity:1" />
-                    <stop offset="80%" style="stop-color:rgb(180,30,30);stop-opacity:1" />
+                <!-- Improved red gradient for rose petals -->
+                <radialGradient id="roseGradientRedNatural" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:rgb(255,70,70);stop-opacity:1" />
+                    <stop offset="90%" style="stop-color:rgb(150,30,30);stop-opacity:1" />
                 </radialGradient>
 
                 <!-- Pink gradient for rose petals -->
-                <radialGradient id="roseGradientPink3D" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,182,193);stop-opacity:1" />
-                    <stop offset="80%" style="stop-color:rgb(255,105,180);stop-opacity:1" />
+                <radialGradient id="roseGradientPinkNatural" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:rgb(255,160,170);stop-opacity:1" />
+                    <stop offset="90%" style="stop-color:rgb(240,120,150);stop-opacity:1" />
                 </radialGradient>
 
                 <!-- Yellow gradient for rose petals -->
-                <radialGradient id="roseGradientYellow3D" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,255,150);stop-opacity:1" />
-                    <stop offset="80%" style="stop-color:rgb(255,220,20);stop-opacity:1" />
+                <radialGradient id="roseGradientYellowNatural" cx="50%" cy="50%" r="50%">
+                    <stop offset="0%" style="stop-color:rgb(255,255,120);stop-opacity:1" />
+                    <stop offset="90%" style="stop-color:rgb(230,180,50);stop-opacity:1" />
                 </radialGradient>
 
                 <!-- Green gradient for stems -->
-                <linearGradient id="stemGradientGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(154,205,50);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(34,139,34);stop-opacity:1" />
+                <linearGradient id="stemGradientGreenNatural" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(100,205,50);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(30,120,30);stop-opacity:1" />
                 </linearGradient>
 
                 <!-- Green gradient for leaves -->
-                <linearGradient id="leafGradientGreen" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(144,238,144);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(34,139,34);stop-opacity:1" />
+                <linearGradient id="leafGradientGreenNatural" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(120,238,120);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(30,110,30);stop-opacity:1" />
                 </linearGradient>
             </defs>
 
-            <!-- Stems -->
+            <!-- Stems with more natural curvature -->
             <g>
-                <rect x="100" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
-                <rect x="200" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
-                <rect x="300" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
-                <rect x="150" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
-                <rect x="250" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
+                <path d="M105 250 Q110 400, 102 500" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
+                <path d="M205 250 Q210 400, 202 500" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
+                <path d="M305 250 Q310 400, 302 500" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
+                <path d="M155 250 Q160 400, 152 500" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
+                <path d="M255 250 Q260 400, 252 500" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
             </g>
 
-            <!-- First rose with detailed petals -->
+            <!-- First natural rose -->
             <g>
-                <path d="M100 180 C80 150, 120 130, 100 100 C120 130, 80 130, 100 180" fill="url(#roseGradientRed3D)" />
-                <path d="M100 180 C85 170, 115 150, 100 130 C115 150, 85 150, 100 180" fill="url(#roseGradientRed3D)" />
-                <!-- Add more petals -->
-                <ellipse cx="100" cy="140" rx="20" ry="30" fill="url(#roseGradientRed3D)" />
-                <ellipse cx="100" cy="130" rx="15" ry="20" fill="url(#roseGradientRed3D)" />
+                <path d="M100 180 C80 150, 120 130, 100 100 C120 130, 80 130, 100 180" fill="url(#roseGradientRedNatural)" />
+                <path d="M100 160 C85 140, 115 130, 100 115 C115 130, 85 130, 100 160" fill="url(#roseGradientRedNatural)" />
+                <!-- More realistic petals with varied curvature -->
+                <ellipse cx="100" cy="130" rx="20" ry="35" fill="url(#roseGradientRedNatural)" />
+                <ellipse cx="100" cy="115" rx="18" ry="25" fill="url(#roseGradientRedNatural)" />
             </g>
 
-            <!-- Second rose with detailed petals -->
+            <!-- Second natural rose -->
             <g>
-                <path d="M200 180 C180 150, 220 130, 200 100 C220 130, 180 130, 200 180" fill="url(#roseGradientPink3D)" />
-                <path d="M200 180 C185 170, 215 150, 200 130 C215 150, 185 150, 200 180" fill="url(#roseGradientPink3D)" />
-                <!-- Add more petals -->
-                <ellipse cx="200" cy="140" rx="20" ry="30" fill="url(#roseGradientPink3D)" />
-                <ellipse cx="200" cy="130" rx="15" ry="20" fill="url(#roseGradientPink3D)" />
+                <path d="M200 180 C180 150, 220 130, 200 100 C220 130, 180 130, 200 180" fill="url(#roseGradientPinkNatural)" />
+                <path d="M200 160 C185 140, 215 130, 200 115 C215 130, 185 130, 200 160" fill="url(#roseGradientPinkNatural)" />
+                <!-- More realistic petals -->
+                <ellipse cx="200" cy="130" rx="20" ry="35" fill="url(#roseGradientPinkNatural)" />
+                <ellipse cx="200" cy="115" rx="18" ry="25" fill="url(#roseGradientPinkNatural)" />
             </g>
 
-            <!-- Third rose with detailed petals -->
+            <!-- Third natural rose -->
             <g>
-                <path d="M300 180 C280 150, 320 130, 300 100 C320 130, 280 130, 300 180" fill="url(#roseGradientYellow3D)" />
-                <path d="M300 180 C285 170, 315 150, 300 130 C315 150, 285 150, 300 180" fill="url(#roseGradientYellow3D)" />
-                <!-- Add more petals -->
-                <ellipse cx="300" cy="140" rx="20" ry="30" fill="url(#roseGradientYellow3D)" />
-                <ellipse cx="300" cy="130" rx="15" ry="20" fill="url(#roseGradientYellow3D)" />
+                <path d="M300 180 C280 150, 320 130, 300 100 C320 130, 280 130, 300 180" fill="url(#roseGradientYellowNatural)" />
+                <path d="M300 160 C285 140, 315 130, 300 115 C315 130, 285 130, 300 160" fill="url(#roseGradientYellowNatural)" />
+                <!-- More realistic petals -->
+                <ellipse cx="300" cy="130" rx="20" ry="35" fill="url(#roseGradientYellowNatural)" />
+                <ellipse cx="300" cy="115" rx="18" ry="25" fill="url(#roseGradientYellowNatural)" />
             </g>
 
             <!-- Fourth rose -->
             <g>
-                <path d="M150 180 C130 150, 170 130, 150 100 C170 130, 130 130, 150 180" fill="url(#roseGradientRed3D)" />
-                <path d="M150 180 C135 170, 165 150, 150 130 C165 150, 135 150, 150 180" fill="url(#roseGradientRed3D)" />
-                <!-- Add more petals -->
-                <ellipse cx="150" cy="140" rx="20" ry="30" fill="url(#roseGradientRed3D)" />
-                <ellipse cx="150" cy="130" rx="15" ry="20" fill="url(#roseGradientRed3D)" />
+                <path d="M150 180 C130 150, 170 130, 150 100 C170 130, 130 130, 150 180" fill="url(#roseGradientRedNatural)" />
+                <path d="M150 160 C135 140, 165 130, 150 115 C165 130, 135 130, 150 160" fill="url(#roseGradientRedNatural)" />
+                <!-- Realistic petals -->
+                <ellipse cx="150" cy="130" rx="20" ry="35" fill="url(#roseGradientRedNatural)" />
+                <ellipse cx="150" cy="115" rx="18" ry="25" fill="url(#roseGradientRedNatural)" />
             </g>
 
             <!-- Fifth rose -->
             <g>
-                <path d="M250 180 C230 150, 270 130, 250 100 C270 130, 230 130, 250 180" fill="url(#roseGradientPink3D)" />
-                <path d="M250 180 C235 170, 265 150, 250 130 C265 150, 235 150, 250 180" fill="url(#roseGradientPink3D)" />
-                <!-- Add more petals -->
-                <ellipse cx="250" cy="140" rx="20" ry="30" fill="url(#roseGradientPink3D)" />
-                <ellipse cx="250" cy="130" rx="15" ry="20" fill="url(#roseGradientPink3D)" />
+                <path d="M250 180 C230 150, 270 130, 250 100 C270 130, 230 130, 250 180" fill="url(#roseGradientPinkNatural)" />
+                <path d="M250 160 C235 140, 265 130, 250 115 C265 130, 235 130, 250 160" fill="url(#roseGradientPinkNatural)" />
+                <!-- Realistic petals -->
+                <ellipse cx="250" cy="130" rx="20" ry="35" fill="url(#roseGradientPinkNatural)" />
+                <ellipse cx="250" cy="115" rx="18" ry="25" fill="url(#roseGradientPinkNatural)" />
             </g>
 
-            <!-- Leaves -->
+            <!-- Natural Leaves with asymmetry -->
             <g>
-                <path d="M90 250 C80 240, 120 240, 110 250 Q100 270, 90 250" fill="url(#leafGradientGreen)" />
-                <path d="M190 250 C180 240, 220 240, 210 250 Q200 270, 190 250" fill="url(#leafGradientGreen)" />
-                <path d="M290 250 C280 240, 320 240, 310 250 Q300 270, 290 250" fill="url(#leafGradientGreen)" />
-                <path d="M140 250 C130 240, 170 240, 160 250 Q150 270, 140 250" fill="url(#leafGradientGreen)" />
-                <path d="M240 250 C230 240, 270 240, 260 250 Q250 270, 240 250" fill="url(#leafGradientGreen)" />
+                <path d="M90 250 C80 240, 120 240, 110 260 Q100 275, 90 250" fill="url(#leafGradientGreenNatural)" />
+                <path d="M190 250 C180 240, 220 240, 210 260 Q200 275, 190 250" fill="url(#leafGradientGreenNatural)" />
+                <path d="M290 250 C280 240, 320 240, 310 260 Q300 275, 290 250" fill="url(#leafGradientGreenNatural)" />
+                <path d="M140 250 C130 240, 170 240, 160 260 Q150 275, 140 250" fill="url(#leafGradientGreenNatural)" />
+                <path d="M240 250 C230 240, 270 240, 260 260 Q250 275, 240 250" fill="url(#leafGradientGreenNatural)" />
             </g>
 
         </svg>
