@@ -1,0 +1,147 @@
+body {
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.bouquet {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    gap: 40px;
+    margin-bottom: -100px; /* To overlap with wrapping */
+}
+
+/* Wrapping Paper */
+.wrapping {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap-left, .wrap-right {
+    position: absolute;
+    bottom: -150px;
+    width: 150px;
+    height: 200px;
+    background: linear-gradient(45deg, #ffcccc, #ff9999);
+    border-radius: 0 50% 50% 0;
+}
+
+.wrap-right {
+    transform: rotateY(180deg);
+    left: 150px;
+}
+
+.wrap-left {
+    right: 150px;
+}
+
+/* Flowers styling */
+.flower {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stem {
+    width: 5px;
+    height: 200px;
+    background-color: #008000;
+    border-radius: 10px;
+}
+
+.petals {
+    display: flex;
+    position: absolute;
+    top: -60px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.petal {
+    width: 50px;
+    height: 80px;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff6666); /* Default petals */
+    border-radius: 50%;
+    position: absolute;
+}
+
+.petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
+.petal:nth-child(2) { transform: rotate(72deg) translateY(-40px); }
+.petal:nth-child(3) { transform: rotate(144deg) translateY(-40px); }
+.petal:nth-child(4) { transform: rotate(216deg) translateY(-40px); }
+.petal:nth-child(5) { transform: rotate(288deg) translateY(-40px); }
+
+.rose .petal { background: radial-gradient(circle at 30% 30%, #ff4d4d, #b30000); }
+.sola .petal { background: radial-gradient(circle at 30% 30%, #f2e6d9, #d9b38c); }
+.navy .petal { background: radial-gradient(circle at 30% 30%, #000080, #003366); }
+.colorful .petal:nth-child(1) { background: radial-gradient(circle at 30% 30%, #ff9999, #ff3333); }
+.colorful .petal:nth-child(2) { background: radial-gradient(circle at 30% 30%, #ffff99, #ffff00); }
+.colorful .petal:nth-child(3) { background: radial-gradient(circle at 30% 30%, #99ccff, #3366ff); }
+.colorful .petal:nth-child(4) { background: radial-gradient(circle at 30% 30%, #ccffcc, #33cc33); }
+.colorful .petal:nth-child(5) { background: radial-gradient(circle at 30% 30%, #ffccff, #ff66ff); }
+
+/* Letter container */
+.letter-container {
+    position: relative;
+    width: 100px;
+    height: 60px;
+    background-color: #fffbe6;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.letter-text {
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Zoomed Letter Animation */
+.letter.zoom {
+    transform: scale(2) translateY(-100px);
+    transition: all 0.5s ease;
+}
+
+/* Message Reveal */
+.message {
+    position: absolute;
+    top: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 10px;
+    background-color: #fffbe6;
+    border: 2px solid #d4af37;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Georgia', serif;
+    color: #333;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.message.show {
+    width: 300px;
+    height: auto;
+    opacity: 1;
+    padding: 15px;
+    transition: all 0.5s ease;
+}
