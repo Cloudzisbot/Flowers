@@ -22,6 +22,7 @@ body {
     height: 400px;
 }
 
+/* Styling for flowers */
 .flower-svg {
     margin: 0 15px;
 }
@@ -43,8 +44,8 @@ body {
 /* Letter inside bouquet */
 .letter-inside {
     position: absolute;
-    top: 130px;
-    left: 80px;
+    top: 150px;
+    left: 50px;
     cursor: pointer;
 }
 
@@ -78,6 +79,8 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Georgia', serif;
+    overflow-y: auto;
+    max-height: 400px;
 }
 
 .message.show {
