@@ -5,20 +5,144 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Realistic Flower Bouquet with Full Message</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Bouquet container */
+        .bouquet-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Bouquet layout */
+        .bouquet {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 500px;
+            height: 400px;
+            position: relative;
+        }
+
+        /* Flower styling */
+        .flower {
+            width: 150px;
+            height: 150px;
+            margin: 10px;
+        }
+
+        /* Letter placement */
+        .letter-inside {
+            position: absolute;
+            top: 150px;
+            left: 180px;
+            cursor: pointer;
+        }
+
+        .letter {
+            width: 80px;
+            height: 50px;
+            background-color: #fff;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        .letter-text {
+            font-family: 'Courier New', monospace;
+            color: #333;
+            font-size: 12px;
+        }
+
+        /* Message styling */
+        .message {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 350px;
+            padding: 20px;
+            background-color: #fffbe6;
+            border: 2px solid #d4af37;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            font-family: 'Georgia', serif;
+            max-height: 400px;
+            overflow-y: auto; /* Allows scrolling for longer content */
+        }
+
+        .message.show {
+            display: block;
+        }
+
+        /* Add zoom effect on the letter */
+        .letter.zoom {
+            transform: scale(1.2);
+        }
+
+        /* Wrapping paper */
+        .bouquet-wrap {
+            position: absolute;
+            bottom: -50px;
+            width: 450px;
+            height: 150px;
+            background: linear-gradient(135deg, #d8bfd8, #8a2be2);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
 </head>
 <body>
+
+    <!-- Bouquet Container -->
     <div class="bouquet-container">
         <!-- SVG Flower Bouquet -->
         <div class="bouquet">
+            <!-- Defining Gradients for Flowers -->
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
+                <defs>
+                    <!-- Purple Flower Gradients -->
+                    <linearGradient id="purple-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#d8bfd8;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:1" />
+                    </linearGradient>
+
+                    <!-- Navy Flower Gradients -->
+                    <linearGradient id="navy-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#000080;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
+                    </linearGradient>
+
+                    <!-- Pink Flower Gradients -->
+                    <linearGradient id="pink-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ff99cc;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ff66b2;stop-opacity:1" />
+                    </linearGradient>
+
+                    <!-- Yellow Flower Gradients -->
+                    <linearGradient id="yellow-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#ffff00;stop-opacity:1" />
+                        <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
             <!-- Flower 1 (Purple Rose) -->
             <div class="flower purple-flower">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <!-- Large outer petal -->
                     <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#purple-gradient1)" />
-                    <!-- Medium petal -->
-                    <path d="M100 40 Q130 60 115 90 Q100 110 85 90 Q70 60 100 40 Z" fill="url(#purple-gradient2)" />
-                    <!-- Inner petal -->
-                    <path d="M100 60 Q120 70 110 85 Q100 100 90 85 Q80 70 100 60 Z" fill="url(#purple-gradient3)" />
                     <!-- Flower center -->
                     <circle cx="100" cy="85" r="12" fill="#6a0dad" />
                 </svg>
@@ -29,10 +153,6 @@
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <!-- Large outer petal -->
                     <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#navy-gradient1)" />
-                    <!-- Medium petal -->
-                    <path d="M100 40 Q130 60 115 90 Q100 110 85 90 Q70 60 100 40 Z" fill="url(#navy-gradient2)" />
-                    <!-- Inner petal -->
-                    <path d="M100 60 Q120 70 110 85 Q100 100 90 85 Q80 70 100 60 Z" fill="url(#navy-gradient3)" />
                     <!-- Flower center -->
                     <circle cx="100" cy="85" r="12" fill="#003366" />
                 </svg>
@@ -43,10 +163,6 @@
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <!-- Large outer petal -->
                     <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#pink-gradient1)" />
-                    <!-- Medium petal -->
-                    <path d="M100 40 Q130 60 115 90 Q100 110 85 90 Q70 60 100 40 Z" fill="url(#pink-gradient2)" />
-                    <!-- Inner petal -->
-                    <path d="M100 60 Q120 70 110 85 Q100 100 90 85 Q80 70 100 60 Z" fill="url(#pink-gradient3)" />
                     <!-- Flower center -->
                     <circle cx="100" cy="85" r="12" fill="#ff66b2" />
                 </svg>
@@ -57,10 +173,6 @@
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
                     <!-- Large outer petal -->
                     <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#yellow-gradient1)" />
-                    <!-- Medium petal -->
-                    <path d="M100 40 Q130 60 115 90 Q100 110 85 90 Q70 60 100 40 Z" fill="url(#yellow-gradient2)" />
-                    <!-- Inner petal -->
-                    <path d="M100 60 Q120 70 110 85 Q100 100 90 85 Q80 70 100 60 Z" fill="url(#yellow-gradient3)" />
                     <!-- Flower center -->
                     <circle cx="100" cy="85" r="12" fill="#ffdd00" />
                 </svg>
@@ -72,12 +184,9 @@
                     <span class="letter-text">Click Me</span>
                 </div>
                 <div class="message" id="message">
-                    <!-- Full Message Content -->
+                    <!-- Full Message -->
                     <p>To the Love of My Life,</p>
-                    <p>
-                        There are moments in life when everything changes, when you meet someone who makes you feel like the luckiest person alive. For me, that moment was the day I met you. From the very first time I saw you, I knew there was something special about you—something that made my heart skip a beat and the world seem brighter. It feels like everything in my life has led up to this moment, and I can’t believe how lucky I am to have you by my side.
-                    </p>
-                    <!-- ... Remaining content here ... -->
+                    <!-- Add the full 2000-word message here -->
                     <p>Tantum te amo et te amabo usque ad mortem usque ad nos.</p>
                 </div>
             </div>
@@ -87,6 +196,14 @@
         <div class="bouquet-wrap"></div>
     </div>
 
-    <script src="script.js"></script>
+    <script>
+        document.getElementById("letter").addEventListener("click", function() {
+            const letter = document.getElementById("letter");
+            const message = document.getElementById("message");
+
+            letter.classList.toggle("zoom");
+            message.classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
