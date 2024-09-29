@@ -7,45 +7,75 @@ body {
     margin: 0;
 }
 
+/* Container for the entire bouquet */
 .bouquet-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+/* Flower styling for the bouquet */
 .bouquet {
     display: flex;
-    position: relative;
     justify-content: space-around;
     align-items: center;
-    width: 350px;
+    width: 400px;
     height: 400px;
+    position: relative;
 }
 
-/* Styling for flowers */
-.flower-svg {
-    margin: 0 15px;
+/* Common flower styles */
+.flower {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
 }
 
-.flower-svg svg {
+/* Petal structure */
+.petal {
     width: 80px;
-    height: 80px;
+    height: 100px;
+    background: radial-gradient(circle at 30% 30%, #ffffff, #ff6666); /* Default gradient for petals */
+    position: absolute;
+    border-radius: 50%;
 }
 
-.purple-flower path, .navy-flower path, .pink-flower path, .yellow-flower path {
-    stroke: none;
-    transition: all 0.3s ease;
+.petal:nth-child(1) { transform: rotate(0deg) translateY(-40px); }
+.petal:nth-child(2) { transform: rotate(72deg) translateY(-40px); }
+.petal:nth-child(3) { transform: rotate(144deg) translateY(-40px); }
+.petal:nth-child(4) { transform: rotate(216deg) translateY(-40px); }
+
+/* Color variations for the flowers */
+.purple .petal {
+    background: radial-gradient(circle at 30% 30%, #d8bfd8, #9400d3);
+}
+.navy .petal {
+    background: radial-gradient(circle at 30% 30%, #000080, #002366);
+}
+.pink .petal {
+    background: radial-gradient(circle at 30% 30%, #ff99cc, #ff66b2);
+}
+.yellow .petal {
+    background: radial-gradient(circle at 30% 30%, #ffeb3b, #ffdd00);
 }
 
-.purple-flower:hover path, .navy-flower:hover path, .pink-flower:hover path, .yellow-flower:hover path {
-    transform: scale(1.1);
+/* Flower center */
+.center {
+    width: 30px;
+    height: 30px;
+    background-color: #ff1493;
+    border-radius: 50%;
+    position: absolute;
+    top: 35px;
+    left: 35px;
 }
 
-/* Letter inside bouquet */
+/* Letter inside the bouquet */
 .letter-inside {
     position: absolute;
-    top: 150px;
-    left: 50px;
+    top: 140px;
+    left: 120px;
     cursor: pointer;
 }
 
@@ -67,27 +97,28 @@ body {
     font-size: 12px;
 }
 
+/* Message styling */
 .message {
     display: none;
     position: absolute;
     top: 60px;
     left: 0;
-    width: 300px;
+    width: 350px;
     padding: 20px;
     background-color: #fffbe6;
     border: 2px solid #d4af37;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     font-family: 'Georgia', serif;
+    max-height: 500px;
     overflow-y: auto;
-    max-height: 400px;
 }
 
 .message.show {
     display: block;
 }
 
-/* Hover effect for the letter */
+/* Zoom effect for the letter */
 .letter.zoom {
     transform: scale(1.2);
 }
@@ -95,7 +126,7 @@ body {
 /* Bouquet Wrapping */
 .bouquet-wrap {
     position: absolute;
-    bottom: -50px;
+    bottom: -40px;
     width: 400px;
     height: 150px;
     background: linear-gradient(135deg, #d8bfd8, #8a2be2);
