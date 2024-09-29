@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Realistic Rose Bouquet</title>
+    <title>Improved Flower Bouquet</title>
     <style>
         body {
             background-color: #f0f0f0;
@@ -126,17 +126,17 @@
 
         <!-- 3D Realistic Rose Bouquet using SVG -->
         <svg class="rose-bouquet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600">
-            <!-- Create a radial gradient for 3D petals -->
+            <!-- Create gradients for petals and stems -->
             <defs>
                 <!-- Red gradient for rose petals -->
                 <radialGradient id="roseGradientRed3D" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,150,150);stop-opacity:1" />
+                    <stop offset="0%" style="stop-color:rgb(255,100,100);stop-opacity:1" />
                     <stop offset="80%" style="stop-color:rgb(180,30,30);stop-opacity:1" />
                 </radialGradient>
 
                 <!-- Pink gradient for rose petals -->
                 <radialGradient id="roseGradientPink3D" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,192,203);stop-opacity:1" />
+                    <stop offset="0%" style="stop-color:rgb(255,182,193);stop-opacity:1" />
                     <stop offset="80%" style="stop-color:rgb(255,105,180);stop-opacity:1" />
                 </radialGradient>
 
@@ -146,6 +146,12 @@
                     <stop offset="80%" style="stop-color:rgb(255,220,20);stop-opacity:1" />
                 </radialGradient>
 
+                <!-- Green gradient for stems -->
+                <linearGradient id="stemGradientGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(154,205,50);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(34,139,34);stop-opacity:1" />
+                </linearGradient>
+
                 <!-- Green gradient for leaves -->
                 <linearGradient id="leafGradientGreen" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" style="stop-color:rgb(144,238,144);stop-opacity:1" />
@@ -153,68 +159,58 @@
                 </linearGradient>
             </defs>
 
-            <!-- Shorter stems with thorns -->
+            <!-- Stems -->
             <g>
-                <rect x="100" y="250" width="3" height="200" fill="green" />
-                <rect x="200" y="250" width="3" height="200" fill="green" />
-                <rect x="300" y="250" width="3" height="200" fill="green" />
-                <rect x="150" y="250" width="3" height="200" fill="green" />
-                <rect x="250" y="250" width="3" height="200" fill="green" />
-                <!-- Add thorns -->
-                <polygon points="100,300 105,310 100,320" fill="#2d2d2d" />
-                <polygon points="200,350 205,360 200,370" fill="#2d2d2d" />
-                <polygon points="300,320 305,330 300,340" fill="#2d2d2d" />
-                <polygon points="150,380 155,390 150,400" fill="#2d2d2d" />
+                <rect x="100" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
+                <rect x="200" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
+                <rect x="300" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
+                <rect x="150" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
+                <rect x="250" y="250" width="5" height="200" fill="url(#stemGradientGreen)" />
             </g>
 
-            <!-- First rose with 3D petals -->
+            <!-- First rose with detailed petals -->
             <g>
-                <path d="M100 180 C80 160, 120 130, 100 100 C120 130, 80 130, 100 180" fill="url(#roseGradientRed3D)" />
-                <path d="M100 180 C90 170, 110 150, 100 130 C110 150, 90 150, 100 180" fill="url(#roseGradientRed3D)" />
-                <path d="M100 180 C85 165, 115 165, 100 180" fill="url(#roseGradientRed3D)" />
-                <!-- Inner petals for depth -->
-                <ellipse cx="100" cy="150" rx="12" ry="18" fill="url(#roseGradientRed3D)" />
-                <ellipse cx="100" cy="140" rx="8" ry="15" fill="url(#roseGradientRed3D)" />
+                <path d="M100 180 C80 150, 120 130, 100 100 C120 130, 80 130, 100 180" fill="url(#roseGradientRed3D)" />
+                <path d="M100 180 C85 170, 115 150, 100 130 C115 150, 85 150, 100 180" fill="url(#roseGradientRed3D)" />
+                <!-- Add more petals -->
+                <ellipse cx="100" cy="140" rx="20" ry="30" fill="url(#roseGradientRed3D)" />
+                <ellipse cx="100" cy="130" rx="15" ry="20" fill="url(#roseGradientRed3D)" />
             </g>
 
-            <!-- Second rose with 3D petals -->
+            <!-- Second rose with detailed petals -->
             <g>
-                <path d="M200 180 C180 160, 220 130, 200 100 C220 130, 180 130, 200 180" fill="url(#roseGradientPink3D)" />
-                <path d="M200 180 C190 170, 210 150, 200 130 C210 150, 190 150, 200 180" fill="url(#roseGradientPink3D)" />
-                <path d="M200 180 C185 165, 215 165, 200 180" fill="url(#roseGradientPink3D)" />
-                <!-- Inner petals for depth -->
-                <ellipse cx="200" cy="150" rx="12" ry="18" fill="url(#roseGradientPink3D)" />
-                <ellipse cx="200" cy="140" rx="8" ry="15" fill="url(#roseGradientPink3D)" />
+                <path d="M200 180 C180 150, 220 130, 200 100 C220 130, 180 130, 200 180" fill="url(#roseGradientPink3D)" />
+                <path d="M200 180 C185 170, 215 150, 200 130 C215 150, 185 150, 200 180" fill="url(#roseGradientPink3D)" />
+                <!-- Add more petals -->
+                <ellipse cx="200" cy="140" rx="20" ry="30" fill="url(#roseGradientPink3D)" />
+                <ellipse cx="200" cy="130" rx="15" ry="20" fill="url(#roseGradientPink3D)" />
             </g>
 
-            <!-- Third rose with 3D petals -->
+            <!-- Third rose with detailed petals -->
             <g>
-                <path d="M300 180 C280 160, 320 130, 300 100 C320 130, 280 130, 300 180" fill="url(#roseGradientYellow3D)" />
-                <path d="M300 180 C290 170, 310 150, 300 130 C310 150, 290 150, 300 180" fill="url(#roseGradientYellow3D)" />
-                <path d="M300 180 C285 165, 315 165, 300 180" fill="url(#roseGradientYellow3D)" />
-                <!-- Inner petals for depth -->
-                <ellipse cx="300" cy="150" rx="12" ry="18" fill="url(#roseGradientYellow3D)" />
-                <ellipse cx="300" cy="140" rx="8" ry="15" fill="url(#roseGradientYellow3D)" />
+                <path d="M300 180 C280 150, 320 130, 300 100 C320 130, 280 130, 300 180" fill="url(#roseGradientYellow3D)" />
+                <path d="M300 180 C285 170, 315 150, 300 130 C315 150, 285 150, 300 180" fill="url(#roseGradientYellow3D)" />
+                <!-- Add more petals -->
+                <ellipse cx="300" cy="140" rx="20" ry="30" fill="url(#roseGradientYellow3D)" />
+                <ellipse cx="300" cy="130" rx="15" ry="20" fill="url(#roseGradientYellow3D)" />
             </g>
 
-            <!-- Fourth rose with 3D petals -->
+            <!-- Fourth rose -->
             <g>
-                <path d="M150 180 C130 160, 170 130, 150 100 C170 130, 130 130, 150 180" fill="url(#roseGradientRed3D)" />
-                <path d="M150 180 C140 170, 160 150, 150 130 C160 150, 140 150, 150 180" fill="url(#roseGradientRed3D)" />
-                <path d="M150 180 C135 165, 165 165, 150 180" fill="url(#roseGradientRed3D)" />
-                <!-- Inner petals for depth -->
-                <ellipse cx="150" cy="150" rx="12" ry="18" fill="url(#roseGradientRed3D)" />
-                <ellipse cx="150" cy="140" rx="8" ry="15" fill="url(#roseGradientRed3D)" />
+                <path d="M150 180 C130 150, 170 130, 150 100 C170 130, 130 130, 150 180" fill="url(#roseGradientRed3D)" />
+                <path d="M150 180 C135 170, 165 150, 150 130 C165 150, 135 150, 150 180" fill="url(#roseGradientRed3D)" />
+                <!-- Add more petals -->
+                <ellipse cx="150" cy="140" rx="20" ry="30" fill="url(#roseGradientRed3D)" />
+                <ellipse cx="150" cy="130" rx="15" ry="20" fill="url(#roseGradientRed3D)" />
             </g>
 
-            <!-- Fifth rose with 3D petals -->
+            <!-- Fifth rose -->
             <g>
-                <path d="M250 180 C230 160, 270 130, 250 100 C270 130, 230 130, 250 180" fill="url(#roseGradientPink3D)" />
-                <path d="M250 180 C240 170, 260 150, 250 130 C260 150, 240 150, 250 180" fill="url(#roseGradientPink3D)" />
-                <path d="M250 180 C235 165, 265 165, 250 180" fill="url(#roseGradientPink3D)" />
-                <!-- Inner petals for depth -->
-                <ellipse cx="250" cy="150" rx="12" ry="18" fill="url(#roseGradientPink3D)" />
-                <ellipse cx="250" cy="140" rx="8" ry="15" fill="url(#roseGradientPink3D)" />
+                <path d="M250 180 C230 150, 270 130, 250 100 C270 130, 230 130, 250 180" fill="url(#roseGradientPink3D)" />
+                <path d="M250 180 C235 170, 265 150, 250 130 C265 150, 235 150, 250 180" fill="url(#roseGradientPink3D)" />
+                <!-- Add more petals -->
+                <ellipse cx="250" cy="140" rx="20" ry="30" fill="url(#roseGradientPink3D)" />
+                <ellipse cx="250" cy="130" rx="15" ry="20" fill="url(#roseGradientPink3D)" />
             </g>
 
             <!-- Leaves -->
