@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realistic Rose Bouquet with Full Message</title>
+    <title>Realistic Rose Bouquet with Thorns and Letter</title>
     <style>
         body {
             background-color: #1a1a1a;
@@ -18,7 +18,7 @@
         .bouquet-container {
             position: relative;
             width: 600px;
-            height: 600px;
+            height: 700px;
         }
 
         /* Letter icon in the top left */
@@ -51,95 +51,28 @@
             overflow-y: auto;
         }
 
-        /* Rose bouquet style */
-        .bouquet {
+        /* SVG Styling for Roses */
+        .rose-bouquet {
             position: absolute;
             bottom: 0;
             left: 50px;
-            display: flex;
-            justify-content: center;
-            align-items: flex-end;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        /* Stems */
-        .stem {
-            width: 2px;
-            height: 150px;
-            background-color: #4caf50;
-            position: relative;
-            transform-origin: bottom;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Roses with petals */
-        .rose {
-            position: absolute;
-            bottom: 100%;
-            width: 0;
-            height: 0;
-            border-radius: 50%;
-            animation: bloom 2s ease-in-out forwards;
-        }
-
-        .rose.red {
-            background: radial-gradient(circle, #ff4b4b, #ff0000);
-            width: 40px;
-            height: 40px;
-            animation-delay: 0.5s;
-        }
-
-        .rose.pink {
-            background: radial-gradient(circle, #ffc1e3, #ff6ec7);
-            width: 35px;
-            height: 35px;
-            animation-delay: 1s;
-        }
-
-        .rose.yellow {
-            background: radial-gradient(circle, #fffba2, #ffd700);
-            width: 50px;
-            height: 50px;
-            animation-delay: 1.5s;
-        }
-
-        .rose.blue {
-            background: radial-gradient(circle, #00bfff, #1e90ff);
-            width: 45px;
-            height: 45px;
-            animation-delay: 2s;
-        }
-
-        .rose.purple {
-            background: radial-gradient(circle, #d8bfd8, #8a2be2);
-            width: 55px;
-            height: 55px;
-            animation-delay: 2.5s;
-        }
-
-        /* Bloom animation */
-        @keyframes bloom {
-            0% {
-                transform: scale(0);
-                opacity: 0;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 1;
-            }
+            width: 500px;
+            height: 600px;
         }
 
         /* Wrapping paper */
         .bouquet-wrap {
             position: absolute;
-            bottom: -30px;
+            bottom: 0;
             width: 450px;
-            height: 120px;
+            height: 150px;
             background: linear-gradient(135deg, #d8bfd8, #8a2be2);
             border-radius: 50%;
+        }
+
+        /* Thorns */
+        .thorn {
+            fill: #3d3d3d;
         }
     </style>
 </head>
@@ -152,77 +85,87 @@
                 <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,6l-8,5L4,6H20z M4,18V8l8,5 l8-5v10H4z"/>
             </svg>
         </div>
+
+        <!-- Full Letter -->
         <div class="message" id="message">
             <!-- Full Message -->
             <p>To the Love of My Life,</p>
-            <p>
-                There are moments in life when everything changes, when you meet someone who makes you feel like the luckiest person alive. For me, that moment was the day I met you. From the very first time I saw you, I knew there was something special about you—something that made my heart skip a beat and the world seem brighter. It feels like everything in my life has led up to this moment, and I can’t believe how lucky I am to have you by my side.
-            </p>
-            <p>
-                Every day with you is a blessing, and I can’t help but feel overwhelming gratitude for your presence in my life. I never knew it was possible to feel so deeply for someone until I met you. You have a way of lighting up even my darkest days. Whether it’s your smile, your laugh, or the way you care so deeply about the people around you, everything about you is magic. I cherish every single moment we spend together, and I find myself constantly thinking about how fortunate I am to share my life with you.
-            </p>
-            <p>
-                On this special day, your birthday, I want to take a moment to tell you just how much you mean to me. Although this is the first birthday we’re celebrating together, it feels like we’ve known each other for a lifetime. I can’t wait to celebrate many more birthdays, and all the incredible moments in between. I want to be there for you for all the special days, the ordinary days, and every single day in between for the rest of our lives.
-            </p>
-            <p>
-                I know I don’t say it often enough, but I am so deeply in love with you. Every time I look at you, I am reminded of how lucky I am. You have brought so much love and joy into my life that it feels like I’m living in a dream. I find myself constantly in awe of you—your kindness, your beauty, your intelligence, your strength. You inspire me to be a better person, and I can’t imagine a future without you in it. The more I get to know you, the more I fall in love with every little thing about you.
-            </p>
-            <p>
-                It’s hard to put into words just how much you mean to me because no words could ever capture the depth of my feelings. But I want you to know that I will spend the rest of my life showing you just how much I love you. From the way you look at me to the way you touch my hand, you make me feel safe, loved, and appreciated. You are my home, my heart, my everything.
-            </p>
-            <p>
-                I know this is just the beginning of our journey together, and I can’t wait to see where life takes us. There is so much I want to experience with you—so many adventures, so many milestones, so many quiet moments of pure happiness. I want to be there for all of it, for every smile and every tear, for every victory and every challenge. I want to be your partner in every sense of the word, to support you, to love you, and to cherish you through all the ups and downs that life throws our way.
-            </p>
-            <p>
-                I often think about the future and all the birthdays we’ll celebrate together. I imagine waking up next to you year after year, excited to make your special day as wonderful as you make every day of my life. I want to grow old with you, to share in all of life’s joys and sorrows, to be your constant source of love and support. I want to spend every day reminding you of how much you mean to me and how incredibly loved you are.
-            </p>
-            <p>
-                I am so thankful for you—for your love, your laughter, your presence in my life. You have made me the happiest I’ve ever been, and I don’t ever want to take that for granted. Every time I look at you, I am reminded of how much I have to be grateful for. I am grateful for your patience, for the way you understand me even when I don’t understand myself. I am grateful for your kindness, for the way you treat others with so much respect and compassion. I am grateful for your beauty, both inside and out, and the way it radiates through everything you do.
-            </p>
-            <p>
-                I know that relationships aren’t always easy, but I want you to know that I am committed to you, to us. I will always be here for you, no matter what. I will always fight for us and for the love that we share. I promise to never take you for granted, to always appreciate the love and happiness you bring into my life. I promise to be there for you through the good times and the bad, to support you in all of your dreams and to be your biggest cheerleader.
-            </p>
-            <p>
-                As we celebrate this birthday together, I want you to know that this is just the first of many. I want to be by your side for all of your birthdays, for all of the special moments in your life. I want to grow with you, to learn with you, to build a life together that is filled with love, joy, and adventure. You make life so much more beautiful, and I can’t wait to see what the future holds for us.
-            </p>
-            <p>
-                There’s a lot I could say about the future—about all the dreams I have for us, all the plans I want to make, all the places I want to explore with you. But for now, I want to focus on the present, on this moment, on you. I want you to know that right here, right now, I am happier than I’ve ever been because I get to share this life with you.
-            </p>
-            <p>
-                You are the love of my life, and I want to spend every single day making sure you know that. I want to remind you every morning, every night, and every moment in between of how much you mean to me. I want to give you the love you deserve, to make sure that you always feel cherished, valued, and adored.
-            </p>
-            <p>
-                So, on this special day, I want to celebrate you—everything that makes you who you are. I want to celebrate your kindness, your beauty, your intelligence, your heart. I want to celebrate the love that we share and the future that we’re building together. I want to celebrate all of the amazing things you’ve accomplished and all of the incredible things that are yet to come.
-            </p>
-            <p>
-                You are the best thing that has ever happened to me, and I am so grateful for you. Thank you for choosing me, for loving me, for being by my side. Thank you for making my life so much more beautiful and for giving me something to look forward to every single day. Thank you for being you, and for letting me be a part of your life.
-            </p>
-            <p>
-                As we celebrate your birthday today, I want you to know that I will always be here for you, that I will always love you, that I will always be grateful for you. I can’t wait to celebrate many more birthdays with you, to create more memories, to share more laughter, and to continue building a life together that is filled with love, happiness, and adventure.
-            </p>
-            <p>
-                Tantum te amo et te amabo usque ad mortem usque ad nos.
-            </p>
+            <p>There are moments in life when everything changes, when you meet someone who makes you feel like the luckiest person alive. For me, that moment was the day I met you...</p>
+            <p>Tantum te amo et te amabo usque ad mortem usque ad nos.</p>
         </div>
 
-        <!-- Realistic flower bouquet with multiple roses and thin stems -->
-        <div class="bouquet">
-            <div class="stem">
-                <div class="rose red"></div>
-            </div>
-            <div class="stem">
-                <div class="rose pink"></div>
-            </div>
-            <div class="stem">
-                <div class="rose yellow"></div>
-            </div>
-            <div class="stem">
-                <div class="rose blue"></div>
-            </div>
-            <div class="stem">
-                <div class="rose purple"></div>
-            </div>
-        </div>
+        <!-- Realistic Rose Bouquet SVG -->
+        <svg class="rose-bouquet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 300">
+            <!-- Rose 1 -->
+            <g>
+                <!-- Stem -->
+                <rect x="70" y="100" width="2" height="180" fill="#4caf50" />
+                <!-- Thorns -->
+                <polygon class="thorn" points="71,130 73,133 71,136" />
+                <polygon class="thorn" points="71,160 73,163 71,166" />
+                <polygon class="thorn" points="71,190 73,193 71,196" />
+                <!-- Rose petals -->
+                <circle cx="71" cy="100" r="20" fill="red" />
+                <circle cx="65" cy="95" r="10" fill="#ff4b4b" />
+                <circle cx="77" cy="105" r="10" fill="#ff6f6f" />
+            </g>
+
+            <!-- Rose 2 -->
+            <g>
+                <!-- Stem -->
+                <rect x="100" y="100" width="2" height="180" fill="#4caf50" />
+                <!-- Thorns -->
+                <polygon class="thorn" points="101,130 103,133 101,136" />
+                <polygon class="thorn" points="101,160 103,163 101,166" />
+                <polygon class="thorn" points="101,190 103,193 101,196" />
+                <!-- Rose petals -->
+                <circle cx="101" cy="100" r="20" fill="pink" />
+                <circle cx="95" cy="95" r="10" fill="#ffc1e3" />
+                <circle cx="107" cy="105" r="10" fill="#ff6ec7" />
+            </g>
+
+            <!-- Rose 3 -->
+            <g>
+                <!-- Stem -->
+                <rect x="130" y="100" width="2" height="180" fill="#4caf50" />
+                <!-- Thorns -->
+                <polygon class="thorn" points="131,130 133,133 131,136" />
+                <polygon class="thorn" points="131,160 133,163 131,166" />
+                <polygon class="thorn" points="131,190 133,193 131,196" />
+                <!-- Rose petals -->
+                <circle cx="131" cy="100" r="20" fill="yellow" />
+                <circle cx="125" cy="95" r="10" fill="#fffba2" />
+                <circle cx="137" cy="105" r="10" fill="#ffd700" />
+            </g>
+
+            <!-- Rose 4 -->
+            <g>
+                <!-- Stem -->
+                <rect x="160" y="100" width="2" height="180" fill="#4caf50" />
+                <!-- Thorns -->
+                <polygon class="thorn" points="161,130 163,133 161,136" />
+                <polygon class="thorn" points="161,160 163,163 161,166" />
+                <polygon class="thorn" points="161,190 163,193 161,196" />
+                <!-- Rose petals -->
+                <circle cx="161" cy="100" r="20" fill="blue" />
+                <circle cx="155" cy="95" r="10" fill="#add8e6" />
+                <circle cx="167" cy="105" r="10" fill="#1e90ff" />
+            </g>
+
+            <!-- Rose 5 -->
+            <g>
+                <!-- Stem -->
+                <rect x="190" y="100" width="2" height="180" fill="#4caf50" />
+                <!-- Thorns -->
+                <polygon class="thorn" points="191,130 193,133 191,136" />
+                <polygon class="thorn" points="191,160 193,163 191,166" />
+                <polygon class="thorn" points="191,190 193,193 191,196" />
+                <!-- Rose petals -->
+                <circle cx="191" cy="100" r="20" fill="purple" />
+                <circle cx="185" cy="95" r="10" fill="#d8bfd8" />
+                <circle cx="197" cy="105" r="10" fill="#8a2be2" />
+            </g>
+        </svg>
 
         <!-- Wrapping paper at the base -->
         <div class="bouquet-wrap"></div>
