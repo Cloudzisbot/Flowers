@@ -7,14 +7,14 @@ body {
     margin: 0;
 }
 
-/* Container for the entire bouquet */
+/* Bouquet container */
 .bouquet-container {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/* Flower styling for the bouquet */
+/* Bouquet layout */
 .bouquet {
     display: flex;
     justify-content: space-around;
@@ -24,7 +24,14 @@ body {
     position: relative;
 }
 
-/* Letter styling */
+/* Flower styling */
+.flower {
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+}
+
+/* Letter placement */
 .letter-inside {
     position: absolute;
     top: 150px;
@@ -74,4 +81,15 @@ body {
 /* Add zoom effect on the letter */
 .letter.zoom {
     transform: scale(1.2);
+}
+
+/* Wrapping paper */
+.bouquet-wrap {
+    position: absolute;
+    bottom: -50px;
+    width: 450px;
+    height: 150px;
+    background: linear-gradient(135deg, #d8bfd8, #8a2be2);
+    border-radius: 50%;
+    z-index: -1;
 }
