@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Realistic Flower Bouquet with Full Message</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Realistic Flower Bouquet with Letter Icon and Full Message</title>
     <style>
         body {
             background-color: #f9f9f9;
@@ -48,8 +47,8 @@
         }
 
         .letter {
-            width: 80px;
-            height: 50px;
+            width: 60px;
+            height: 40px;
             background-color: #fff;
             border: 2px solid #d4af37;
             border-radius: 8px;
@@ -59,10 +58,10 @@
             transition: transform 0.4s ease-in-out;
         }
 
-        .letter-text {
-            font-family: 'Courier New', monospace;
-            color: #333;
-            font-size: 12px;
+        /* Letter icon (envelope) */
+        .letter svg {
+            width: 40px;
+            height: 40px;
         }
 
         /* Message styling */
@@ -112,79 +111,90 @@
             <!-- Defining Gradients for Flowers -->
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: none;">
                 <defs>
-                    <!-- Purple Flower Gradients -->
-                    <linearGradient id="purple-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#d8bfd8;stop-opacity:1" />
+                    <!-- Purple Petal Gradient -->
+                    <radialGradient id="purple-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:#e0b0ff;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#8a2be2;stop-opacity:1" />
-                    </linearGradient>
+                    </radialGradient>
 
-                    <!-- Navy Flower Gradients -->
-                    <linearGradient id="navy-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <!-- Navy Petal Gradient -->
+                    <radialGradient id="navy-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
                         <stop offset="0%" style="stop-color:#000080;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#003366;stop-opacity:1" />
-                    </linearGradient>
+                    </radialGradient>
 
-                    <!-- Pink Flower Gradients -->
-                    <linearGradient id="pink-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <!-- Pink Petal Gradient -->
+                    <radialGradient id="pink-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
                         <stop offset="0%" style="stop-color:#ff99cc;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#ff66b2;stop-opacity:1" />
-                    </linearGradient>
+                    </radialGradient>
 
-                    <!-- Yellow Flower Gradients -->
-                    <linearGradient id="yellow-gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
-                        <stop offset="0%" style="stop-color:#ffff00;stop-opacity:1" />
+                    <!-- Yellow Petal Gradient -->
+                    <radialGradient id="yellow-gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+                        <stop offset="0%" style="stop-color:#ffff99;stop-opacity:1" />
                         <stop offset="100%" style="stop-color:#ffd700;stop-opacity:1" />
-                    </linearGradient>
+                    </radialGradient>
                 </defs>
             </svg>
 
             <!-- Flower 1 (Purple Rose) -->
             <div class="flower purple-flower">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Large outer petal -->
-                    <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#purple-gradient1)" />
-                    <!-- Flower center -->
-                    <circle cx="100" cy="85" r="12" fill="#6a0dad" />
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <!-- Large petals -->
+                        <path d="M50,10 C30,20 10,40 30,50 C10,60 30,80 50,70 C70,80 90,60 70,50 C90,40 70,20 50,10 Z" fill="url(#purple-gradient)" />
+                        <!-- Inner petals -->
+                        <path d="M50,25 C40,30 30,40 40,45 C30,50 40,60 50,55 C60,60 70,50 60,45 C70,40 60,30 50,25 Z" fill="#b19cd9" />
+                    </g>
                 </svg>
             </div>
 
             <!-- Flower 2 (Navy Blue Rose) -->
             <div class="flower navy-flower">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Large outer petal -->
-                    <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#navy-gradient1)" />
-                    <!-- Flower center -->
-                    <circle cx="100" cy="85" r="12" fill="#003366" />
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <!-- Large petals -->
+                        <path d="M50,10 C30,20 10,40 30,50 C10,60 30,80 50,70 C70,80 90,60 70,50 C90,40 70,20 50,10 Z" fill="url(#navy-gradient)" />
+                        <!-- Inner petals -->
+                        <path d="M50,25 C40,30 30,40 40,45 C30,50 40,60 50,55 C60,60 70,50 60,45 C70,40 60,30 50,25 Z" fill="#000080" />
+                    </g>
                 </svg>
             </div>
 
             <!-- Flower 3 (Pink Rose) -->
             <div class="flower pink-flower">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Large outer petal -->
-                    <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#pink-gradient1)" />
-                    <!-- Flower center -->
-                    <circle cx="100" cy="85" r="12" fill="#ff66b2" />
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <!-- Large petals -->
+                        <path d="M50,10 C30,20 10,40 30,50 C10,60 30,80 50,70 C70,80 90,60 70,50 C90,40 70,20 50,10 Z" fill="url(#pink-gradient)" />
+                        <!-- Inner petals -->
+                        <path d="M50,25 C40,30 30,40 40,45 C30,50 40,60 50,55 C60,60 70,50 60,45 C70,40 60,30 50,25 Z" fill="#ff66b2" />
+                    </g>
                 </svg>
             </div>
 
             <!-- Flower 4 (Yellow Flower) -->
             <div class="flower yellow-flower">
-                <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Large outer petal -->
-                    <path d="M100 20 Q140 50 120 90 Q100 120 80 90 Q60 50 100 20 Z" fill="url(#yellow-gradient1)" />
-                    <!-- Flower center -->
-                    <circle cx="100" cy="85" r="12" fill="#ffdd00" />
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                        <!-- Large petals -->
+                        <path d="M50,10 C30,20 10,40 30,50 C10,60 30,80 50,70 C70,80 90,60 70,50 C90,40 70,20 50,10 Z" fill="url(#yellow-gradient)" />
+                        <!-- Inner petals -->
+                        <path d="M50,25 C40,30 30,40 40,45 C30,50 40,60 50,55 C60,60 70,50 60,45 C70,40 60,30 50,25 Z" fill="#ffd700" />
+                    </g>
                 </svg>
             </div>
 
             <!-- Interactive letter inside the bouquet -->
             <div class="letter-inside">
                 <div class="letter" id="letter">
-                    <span class="letter-text">Click Me</span>
+                    <!-- SVG Envelope Icon for Letter -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,6l-8,5L4,6H20z M4,18V8l8,5 l8-5v10H4z"/>
+                    </svg>
                 </div>
                 <div class="message" id="message">
-                    <!-- Full Message -->
+                    <!-- Full Letter Message -->
                     <p>To the Love of My Life,</p>
                     <p>
                         There are moments in life when everything changes, when you meet someone who makes you feel like the luckiest person alive. For me, that moment was the day I met you. From the very first time I saw you, I knew there was something special about you—something that made my heart skip a beat and the world seem brighter. It feels like everything in my life has led up to this moment, and I can’t believe how lucky I am to have you by my side.
