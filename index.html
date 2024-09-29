@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3D Rose Bouquet</title>
+    <title>3D Realistic Rose Bouquet</title>
     <style>
         body {
             background-color: #f0f0f0;
@@ -34,11 +34,6 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             max-height: 300px;
             overflow-y: auto;
-        }
-
-        /* Add thorns, stems, etc. */
-        .thorn {
-            fill: #3d3d3d;
         }
 
         /* Letter styling */
@@ -150,71 +145,87 @@
                     <stop offset="0%" style="stop-color:rgb(255,255,150);stop-opacity:1" />
                     <stop offset="80%" style="stop-color:rgb(255,220,20);stop-opacity:1" />
                 </radialGradient>
+
+                <!-- Green gradient for leaves -->
+                <linearGradient id="leafGradientGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:rgb(144,238,144);stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:rgb(34,139,34);stop-opacity:1" />
+                </linearGradient>
             </defs>
 
-            <!-- Stems with thorns -->
+            <!-- Shorter stems with thorns -->
             <g>
-                <rect x="100" y="150" width="3" height="350" fill="green" />
-                <rect x="200" y="150" width="3" height="350" fill="green" />
-                <rect x="300" y="150" width="3" height="350" fill="green" />
-                <rect x="150" y="150" width="3" height="350" fill="green" />
-                <rect x="250" y="150" width="3" height="350" fill="green" />
+                <rect x="100" y="250" width="3" height="200" fill="green" />
+                <rect x="200" y="250" width="3" height="200" fill="green" />
+                <rect x="300" y="250" width="3" height="200" fill="green" />
+                <rect x="150" y="250" width="3" height="200" fill="green" />
+                <rect x="250" y="250" width="3" height="200" fill="green" />
                 <!-- Add thorns -->
-                <polygon points="100,200 105,210 100,220" fill="#2d2d2d" />
-                <polygon points="200,250 205,260 200,270" fill="#2d2d2d" />
-                <polygon points="300,220 305,230 300,240" fill="#2d2d2d" />
-                <polygon points="150,300 155,310 150,320" fill="#2d2d2d" />
+                <polygon points="100,300 105,310 100,320" fill="#2d2d2d" />
+                <polygon points="200,350 205,360 200,370" fill="#2d2d2d" />
+                <polygon points="300,320 305,330 300,340" fill="#2d2d2d" />
+                <polygon points="150,380 155,390 150,400" fill="#2d2d2d" />
             </g>
 
-            <!-- First rose with 3D effect petals -->
+            <!-- First rose with 3D petals -->
             <g>
-                <path d="M100 150 Q80 130, 100 100 Q120 130, 100 150" fill="url(#roseGradientRed3D)" />
-                <path d="M100 150 Q80 160, 100 180 Q120 160, 100 150" fill="url(#roseGradientRed3D)" />
-                <path d="M100 150 Q90 130, 80 120 Q110 120, 100 150" fill="url(#roseGradientRed3D)" />
+                <path d="M100 180 C80 160, 120 130, 100 100 C120 130, 80 130, 100 180" fill="url(#roseGradientRed3D)" />
+                <path d="M100 180 C90 170, 110 150, 100 130 C110 150, 90 150, 100 180" fill="url(#roseGradientRed3D)" />
+                <path d="M100 180 C85 165, 115 165, 100 180" fill="url(#roseGradientRed3D)" />
                 <!-- Inner petals for depth -->
-                <ellipse cx="100" cy="150" rx="15" ry="25" fill="url(#roseGradientRed3D)" />
-                <ellipse cx="100" cy="140" rx="10" ry="20" fill="url(#roseGradientRed3D)" />
+                <ellipse cx="100" cy="150" rx="12" ry="18" fill="url(#roseGradientRed3D)" />
+                <ellipse cx="100" cy="140" rx="8" ry="15" fill="url(#roseGradientRed3D)" />
             </g>
 
-            <!-- Second rose with 3D effect petals -->
+            <!-- Second rose with 3D petals -->
             <g>
-                <path d="M200 150 Q180 130, 200 100 Q220 130, 200 150" fill="url(#roseGradientPink3D)" />
-                <path d="M200 150 Q180 160, 200 180 Q220 160, 200 150" fill="url(#roseGradientPink3D)" />
-                <path d="M200 150 Q190 130, 180 120 Q210 120, 200 150" fill="url(#roseGradientPink3D)" />
+                <path d="M200 180 C180 160, 220 130, 200 100 C220 130, 180 130, 200 180" fill="url(#roseGradientPink3D)" />
+                <path d="M200 180 C190 170, 210 150, 200 130 C210 150, 190 150, 200 180" fill="url(#roseGradientPink3D)" />
+                <path d="M200 180 C185 165, 215 165, 200 180" fill="url(#roseGradientPink3D)" />
                 <!-- Inner petals for depth -->
-                <ellipse cx="200" cy="150" rx="15" ry="25" fill="url(#roseGradientPink3D)" />
-                <ellipse cx="200" cy="140" rx="10" ry="20" fill="url(#roseGradientPink3D)" />
+                <ellipse cx="200" cy="150" rx="12" ry="18" fill="url(#roseGradientPink3D)" />
+                <ellipse cx="200" cy="140" rx="8" ry="15" fill="url(#roseGradientPink3D)" />
             </g>
 
-            <!-- Third rose with 3D effect petals -->
+            <!-- Third rose with 3D petals -->
             <g>
-                <path d="M300 150 Q280 130, 300 100 Q320 130, 300 150" fill="url(#roseGradientYellow3D)" />
-                <path d="M300 150 Q280 160, 300 180 Q320 160, 300 150" fill="url(#roseGradientYellow3D)" />
-                <path d="M300 150 Q290 130, 280 120 Q310 120, 300 150" fill="url(#roseGradientYellow3D)" />
+                <path d="M300 180 C280 160, 320 130, 300 100 C320 130, 280 130, 300 180" fill="url(#roseGradientYellow3D)" />
+                <path d="M300 180 C290 170, 310 150, 300 130 C310 150, 290 150, 300 180" fill="url(#roseGradientYellow3D)" />
+                <path d="M300 180 C285 165, 315 165, 300 180" fill="url(#roseGradientYellow3D)" />
                 <!-- Inner petals for depth -->
-                <ellipse cx="300" cy="150" rx="15" ry="25" fill="url(#roseGradientYellow3D)" />
-                <ellipse cx="300" cy="140" rx="10" ry="20" fill="url(#roseGradientYellow3D)" />
+                <ellipse cx="300" cy="150" rx="12" ry="18" fill="url(#roseGradientYellow3D)" />
+                <ellipse cx="300" cy="140" rx="8" ry="15" fill="url(#roseGradientYellow3D)" />
             </g>
 
-            <!-- Fourth rose with 3D effect petals -->
+            <!-- Fourth rose with 3D petals -->
             <g>
-                <path d="M150 150 Q130 130, 150 100 Q170 130, 150 150" fill="url(#roseGradientRed3D)" />
-                <path d="M150 150 Q130 160, 150 180 Q170 160, 150 150" fill="url(#roseGradientRed3D)" />
-                <path d="M150 150 Q140 130, 130 120 Q160 120, 150 150" fill="url(#roseGradientRed3D)" />
+                <path d="M150 180 C130 160, 170 130, 150 100 C170 130, 130 130, 150 180" fill="url(#roseGradientRed3D)" />
+                <path d="M150 180 C140 170, 160 150, 150 130 C160 150, 140 150, 150 180" fill="url(#roseGradientRed3D)" />
+                <path d="M150 180 C135 165, 165 165, 150 180" fill="url(#roseGradientRed3D)" />
                 <!-- Inner petals for depth -->
-                <ellipse cx="150" cy="150" rx="15" ry="25" fill="url(#roseGradientRed3D)" />
-                <ellipse cx="150" cy="140" rx="10" ry="20" fill="url(#roseGradientRed3D)" />
+                <ellipse cx="150" cy="150" rx="12" ry="18" fill="url(#roseGradientRed3D)" />
+                <ellipse cx="150" cy="140" rx="8" ry="15" fill="url(#roseGradientRed3D)" />
             </g>
 
-            <!-- Fifth rose with 3D effect petals -->
+            <!-- Fifth rose with 3D petals -->
             <g>
-                <path d="M250 150 Q230 130, 250 100 Q270 130, 250 150" fill="url(#roseGradientPink3D)" />
-                <path d="M250 150 Q230 160, 250 180 Q270 160, 250 150" fill="url(#roseGradientPink3D)" />
-                <path d="M250 150 Q240 130, 230 120 Q260 120, 250 150" fill="url(#roseGradientPink3D)" />
+                <path d="M250 180 C230 160, 270 130, 250 100 C270 130, 230 130, 250 180" fill="url(#roseGradientPink3D)" />
+                <path d="M250 180 C240 170, 260 150, 250 130 C260 150, 240 150, 250 180" fill="url(#roseGradientPink3D)" />
+                <path d="M250 180 C235 165, 265 165, 250 180" fill="url(#roseGradientPink3D)" />
                 <!-- Inner petals for depth -->
-                <ellipse cx="250" cy="150" rx="15" ry="25" fill="url(#roseGradientPink3D)" />
-                <ellipse cx="250" cy="140" rx="10" ry="20" fill="url(#roseGradientPink3D)" />
+                <ellipse cx="250" cy="150" rx="12" ry="18" fill="url(#roseGradientPink3D)" />
+                <ellipse cx="250" cy="140" rx="8" ry="15" fill="url(#roseGradientPink3D)" />
             </g>
+
+            <!-- Leaves -->
+            <g>
+                <path d="M90 250 C80 240, 120 240, 110 250 Q100 270, 90 250" fill="url(#leafGradientGreen)" />
+                <path d="M190 250 C180 240, 220 240, 210 250 Q200 270, 190 250" fill="url(#leafGradientGreen)" />
+                <path d="M290 250 C280 240, 320 240, 310 250 Q300 270, 290 250" fill="url(#leafGradientGreen)" />
+                <path d="M140 250 C130 240, 170 240, 160 250 Q150 270, 140 250" fill="url(#leafGradientGreen)" />
+                <path d="M240 250 C230 240, 270 240, 260 250 Q250 270, 240 250" fill="url(#leafGradientGreen)" />
+            </g>
+
         </svg>
 
         <!-- Wrapping paper at the base -->
