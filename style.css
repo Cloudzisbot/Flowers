@@ -18,95 +18,33 @@ body {
     position: relative;
     justify-content: space-around;
     align-items: center;
-    width: 300px;
+    width: 350px;
     height: 400px;
 }
 
-.flower {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10px;
+.flower-svg {
+    margin: 0 15px;
 }
 
-.petal-group {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Petal styling for all flowers */
-.petal {
-    width: 60px;
+.flower-svg svg {
+    width: 80px;
     height: 80px;
-    background: radial-gradient(circle at 30% 30%, #ffffff, #ff6666); /* Default petals */
-    border-radius: 50%;
-    position: absolute;
 }
 
-.petal:nth-child(1) { transform: rotate(0deg) translateY(-30px); }
-.petal:nth-child(2) { transform: rotate(72deg) translateY(-30px); }
-.petal:nth-child(3) { transform: rotate(144deg) translateY(-30px); }
-.petal:nth-child(4) { transform: rotate(216deg) translateY(-30px); }
-.petal:nth-child(5) { transform: rotate(288deg) translateY(-30px); }
-
-/* Flower Colors */
-.red .petal {
-    background: radial-gradient(circle at 30% 30%, #ff4d4d, #b30000);
+.purple-flower path, .navy-flower path, .pink-flower path, .yellow-flower path {
+    stroke: none;
+    transition: all 0.3s ease;
 }
 
-.purple .petal {
-    background: radial-gradient(circle at 30% 30%, #d8bfd8, #9400d3);
-}
-
-.navy .petal {
-    background: radial-gradient(circle at 30% 30%, #000080, #002366);
-}
-
-.yellow .petal {
-    background: radial-gradient(circle at 30% 30%, #fff200, #ffc000);
-}
-
-.pink .petal {
-    background: radial-gradient(circle at 30% 30%, #ffccff, #ff66ff);
-}
-
-/* Flower Centers */
-.center {
-    width: 30px;
-    height: 30px;
-    background-color: #ff1493;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.red .center { background-color: #b30000; }
-.purple .center { background-color: #4b0082; }
-.navy .center { background-color: #001a33; }
-.yellow .center { background-color: #ffcc00; }
-.pink .center { background-color: #ff1493; }
-
-/* Bouquet Wrapping */
-.bouquet-wrap {
-    position: absolute;
-    bottom: -40px;
-    width: 350px;
-    height: 180px;
-    background: linear-gradient(135deg, #d8bfd8, #8a2be2);
-    border-radius: 50%;
-    z-index: -1;
+.purple-flower:hover path, .navy-flower:hover path, .pink-flower:hover path, .yellow-flower:hover path {
+    transform: scale(1.1);
 }
 
 /* Letter inside bouquet */
 .letter-inside {
     position: absolute;
-    top: 120px;
-    left: 50px;
+    top: 130px;
+    left: 80px;
     cursor: pointer;
 }
 
@@ -149,4 +87,15 @@ body {
 /* Hover effect for the letter */
 .letter.zoom {
     transform: scale(1.2);
+}
+
+/* Bouquet Wrapping */
+.bouquet-wrap {
+    position: absolute;
+    bottom: -50px;
+    width: 400px;
+    height: 150px;
+    background: linear-gradient(135deg, #d8bfd8, #8a2be2);
+    border-radius: 50%;
+    z-index: -1;
 }
