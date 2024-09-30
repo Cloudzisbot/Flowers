@@ -17,7 +17,6 @@
       position: relative;
     }
 
-    /* Aesthetic Letter Style */
     .letter-inside {
       position: absolute;
       bottom: 50px;
@@ -43,7 +42,6 @@
       transform: scale(1.05);
     }
 
-    /* Full Message Box */
     .message-container {
       position: absolute;
       top: 10%;
@@ -65,7 +63,6 @@
       line-height: 1.5;
     }
 
-    /* SVG Style */
     svg {
       position: absolute;
       top: 50px;
@@ -74,36 +71,34 @@
     }
 
     .greenery {
-      fill: #333; /* Darker greenery */
+      fill: #333; 
     }
 
     .petal {
-      fill: #001f3f; /* Navy Blue Petals */
+      fill: #001f3f; 
     }
 
     .center {
-      fill: #ffd700; /* Gold center */
+      fill: #ffd700; 
     }
 
     .stem {
-      stroke: #444444; /* Darker stem */
+      stroke: #444444; 
       stroke-width: 5;
     }
 
     .wrap {
-      fill: #8b5e3c; /* Brown wrapping paper */
+      fill: #8b5e3c; 
     }
 
   </style>
 </head>
 <body>
 
-  <!-- Hidden Aesthetic Letter -->
   <div class="letter-inside" id="letter">
     Open Letter
   </div>
 
-  <!-- Full Message Container -->
   <div class="message-container" id="message">
     <p>To the Love of My Life,</p>
     <p>
@@ -156,21 +151,21 @@
     </p>
   </div>
 
-  <!-- SVG 2D Realistic Bouquet -->
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
-    <!-- Stems -->
-    <line x1="150" y1="380" x2="150" y2="530" class="stem" />
-    <line x1="200" y1="370" x2="200" y2="540" class="stem" /> <!-- Middle stem longer -->
-    <line x1="250" y1="370" x2="250" y2="540" class="stem" /> <!-- Middle stem longer -->
-    <line x1="180" y1="380" x2="180" y2="530" class="stem" />
-    <line x1="220" y1="370" x2="220" y2="540" class="stem" /> <!-- Middle stem longer -->
-    <line x1="130" y1="380" x2="130" y2="530" class="stem" />
-    <line x1="270" y1="380" x2="270" y2="530" class="stem" />
+    <!-- Stems aligned with flowers -->
+    <line x1="130" y1="330" x2="130" y2="530" class="stem" />
+    <line x1="200" y1="310" x2="200" y2="540" class="stem" /> <!-- Middle stem longer -->
+    <line x1="270" y1="320" x2="270" y2="540" class="stem" />
+    <line x1="160" y1="350" x2="160" y2="530" class="stem" />
+    <line x1="230" y1="350" x2="230" y2="540" class="stem" />
+    <line x1="120" y1="380" x2="120" y2="530" class="stem" />
+    <line x1="280" y1="380" x2="280" y2="530" class="stem" />
+
+    <!-- Flowers repositioned on stems -->
 
     <!-- Flower 1 -->
-    <g transform="translate(130, 230) rotate(-10)">
+    <g transform="translate(130, 280) rotate(-10)">
       <circle cx="0" cy="0" r="15" class="center"/>
-      <!-- Evenly spaced petals using trigonometry -->
       <circle cx="0" cy="-30" r="20" class="petal"/>
       <circle cx="28" cy="-10" r="20" class="petal"/>
       <circle cx="18" cy="25" r="20" class="petal"/>
@@ -189,7 +184,7 @@
     </g>
 
     <!-- Flower 3 -->
-    <g transform="translate(260, 240) rotate(-5)">
+    <g transform="translate(270, 270) rotate(-5)">
       <circle cx="0" cy="0" r="15" class="center"/>
       <circle cx="0" cy="-30" r="20" class="petal"/>
       <circle cx="28" cy="-10" r="20" class="petal"/>
@@ -199,7 +194,7 @@
     </g>
 
     <!-- Flower 4 -->
-    <g transform="translate(160, 290) rotate(-15)">
+    <g transform="translate(160, 320) rotate(-15)">
       <circle cx="0" cy="0" r="15" class="center"/>
       <circle cx="0" cy="-30" r="20" class="petal"/>
       <circle cx="28" cy="-10" r="20" class="petal"/>
@@ -209,7 +204,7 @@
     </g>
 
     <!-- Flower 5 -->
-    <g transform="translate(230, 300) rotate(10)">
+    <g transform="translate(230, 320) rotate(10)">
       <circle cx="0" cy="0" r="15" class="center"/>
       <circle cx="0" cy="-30" r="20" class="petal"/>
       <circle cx="28" cy="-10" r="20" class="petal"/>
@@ -219,7 +214,7 @@
     </g>
 
     <!-- Flower 6 -->
-    <g transform="translate(120, 340) rotate(-5)">
+    <g transform="translate(120, 360) rotate(-5)">
       <circle cx="0" cy="0" r="15" class="center"/>
       <circle cx="0" cy="-30" r="20" class="petal"/>
       <circle cx="28" cy="-10" r="20" class="petal"/>
@@ -229,7 +224,7 @@
     </g>
 
     <!-- Flower 7 -->
-    <g transform="translate(260, 340) rotate(15)">
+    <g transform="translate(280, 360) rotate(15)">
       <circle cx="0" cy="0" r="15" class="center"/>
       <circle cx="0" cy="-30" r="20" class="petal"/>
       <circle cx="28" cy="-10" r="20" class="petal"/>
@@ -238,12 +233,10 @@
       <circle cx="-28" cy="-10" r="20" class="petal"/>
     </g>
 
-    <!-- Paper Wrapping (Connected with Flowers) -->
+    <!-- Paper Wrapping -->
     <polygon points="50,400 350,400 200,530" class="wrap" />
-
   </svg>
 
-  <!-- Toggle message visibility -->
   <script>
     const letter = document.getElementById("letter");
     const message = document.getElementById("message");
