@@ -3,183 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>3D Flower Bouquet with Hidden Letter</title>
+  <title>3D Cube Test</title>
   <style>
     body {
       margin: 0;
       overflow: hidden;
-      font-family: Arial, sans-serif;
-      background-color: #f0f0f0;
     }
     canvas {
       display: block;
-    }
-    .message-container {
-      position: absolute;
-      top: 10%;
-      left: 10%;
-      width: 80%;
-      height: 80%;
-      background-color: rgba(255, 255, 255, 0.9);
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      display: none;
-      overflow-y: auto;
-      z-index: 10;
-    }
-    .message-container p {
-      margin-bottom: 20px;
-    }
-    .letter-inside {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      cursor: pointer;
-      z-index: 2;
-      width: 50px;
-      height: 50px;
-    }
-    .letter-inside svg {
-      width: 100%;
-      height: 100%;
     }
   </style>
 </head>
 <body>
 
-  <!-- Hidden Letter Icon -->
-  <div class="letter-inside" id="letter">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-      <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,6l-8,5L4,6H20z M4,18V8l8,5 l8-5v10H4z"/>
-    </svg>
-  </div>
-
-  <!-- Full Message Container -->
-  <div class="message-container" id="message">
-    <p>To the Love of My Life,</p>
-    <!-- Full message goes here (omitted for brevity) -->
-  </div>
-
-  <!-- Include 3D Bouquet (Three.js Code) -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
   <script src="https://threejs.org/examples/js/controls/OrbitControls.js"></script>
 
   <script>
-    // Scene setup
+    // Create the scene
     const scene = new THREE.Scene();
+    
+    // Create the camera
     const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    camera.position.z = 5;  // Set camera position
+
+    // Create the renderer
+    const renderer = new THREE.WebGLRenderer();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    renderer.shadowMap.enabled = true;
     document.body.appendChild(renderer.domElement);
 
-    // Camera controls
+    // Create an orbit control
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enableDamping = true;
-    controls.dampingFactor = 0.05;
-    controls.enableZoom = true;
 
-    // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Brighter ambient light
-    scene.add(ambientLight);
+    // Add a simple cube
+    const geometry = new THREE.BoxGeometry();
+    const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });  // Green cube
+    const cube = new THREE.Mesh(geometry, material);
+    scene.add(cube);
 
-    const pointLight = new THREE.PointLight(0xffffff, 1);
-    pointLight.position.set(10, 10, 10);
-    pointLight.castShadow = true;
-    scene.add(pointLight);
-
-    // Texture Loader
-    const textureLoader = new THREE.TextureLoader();
-    const rosePetalTexture = textureLoader.load('textures/rose-petal.jpg');
-    const tulipPetalTexture = textureLoader.load('textures/tulip-petal.jpg');
-    const lilyPetalTexture = textureLoader.load('textures/lily-petal.jpg');
-    const leafTexture = textureLoader.load('textures/leaf-texture.jpg');
-    const stemTexture = textureLoader.load('textures/stem-texture.jpg');
-
-    // Create a rose geometry (with texture)
-    const createRose = () => {
-      const petalGeometry = new THREE.ConeGeometry(0.4, 1.5, 8); // Cone shape for petals
-      const petalMaterial = new THREE.MeshPhongMaterial({ map: rosePetalTexture });
-      const petals = new THREE.Group();
-
-      // Create several petals
-      for (let i = 0; i < 8; i++) {
-        const petal = new THREE.Mesh(petalGeometry, petalMaterial);
-        petal.position.set(Math.sin(i * Math.PI / 4) * 1, Math.cos(i * Math.PI / 4) * 1, 0);
-        petal.rotation.z = i * Math.PI / 4;
-        petals.add(petal);
-      }
-
-      // Create a stem
-      const stemGeometry = new THREE.CylinderGeometry(0.1, 0.1, 5);
-      const stemMaterial = new THREE.MeshPhongMaterial({ map: stemTexture });
-      const stem = new THREE.Mesh(stemGeometry, stemMaterial);
-      stem.position.set(0, -2.5, 0);
-      petals.add(stem);
-
-      return petals;
-    };
-
-    // Create a tulip geometry (with texture)
-    const createTulip = () => {
-      const petalGeometry = new THREE.ConeGeometry(0.3, 1.2, 10); // Smaller cone for tulip petals
-      const petalMaterial = new THREE.MeshPhongMaterial({ map: tulipPetalTexture });
-      const petals = new THREE.Group();
-
-      // Create tulip petals
-      for (let i = 0; i < 6; i++) {
-        const petal = new THREE.Mesh(petalGeometry, petalMaterial);
-        petal.position.set(Math.sin(i * Math.PI / 3) * 0.7, Math.cos(i * Math.PI / 3) * 0.7, 0);
-        petal.rotation.z = i * Math.PI / 3;
-        petals.add(petal);
-      }
-
-      // Create a stem for tulip
-      const stemGeometry = new THREE.CylinderGeometry(0.1, 0.1, 4);
-      const stemMaterial = new THREE.MeshPhongMaterial({ map: stemTexture });
-      const stem = new THREE.Mesh(stemGeometry, stemMaterial);
-      stem.position.set(0, -2.5, 0);
-      petals.add(stem);
-
-      return petals;
-    };
-
-    // Create a bouquet with different flowers
-    const bouquet = new THREE.Group();
-    for (let i = 0; i < 3; i++) {
-      const rose = createRose();
-      rose.position.set(Math.random() * 3 - 1.5, Math.random() * 3 - 1.5, 0); // Adjusted position
-      bouquet.add(rose);
-    }
-
-    for (let i = 0; i < 3; i++) {
-      const tulip = createTulip();
-      tulip.position.set(Math.random() * 3 - 1.5, Math.random() * 3 - 1.5, 0); // Adjusted position
-      bouquet.add(tulip);
-    }
-
-    scene.add(bouquet);
-
-    // Position the camera
-    camera.position.set(0, 2, 12); // Moved the camera further back
-
-    // Animation loop
+    // Render loop
     function animate() {
       requestAnimationFrame(animate);
-      bouquet.rotation.y += 0.01; // Slow rotation
-      controls.update(); // Update the orbit controls
-      renderer.render(scene, camera);
+      cube.rotation.x += 0.01;  // Rotate the cube
+      cube.rotation.y += 0.01;
+      controls.update();  // Update controls
+      renderer.render(scene, camera);  // Render the scene
     }
 
     animate();
-
-    // Toggle message visibility
-    document.getElementById("letter").addEventListener("click", function() {
-      const message = document.getElementById("message");
-      message.style.display = message.style.display === "block" ? "none" : "block";
-    });
 
     // Handle window resize
     window.addEventListener('resize', () => {
@@ -189,6 +60,8 @@
       camera.aspect = width / height;
       camera.updateProjectionMatrix();
     });
+
   </script>
+
 </body>
 </html>
