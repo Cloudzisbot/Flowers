@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Realistic Bouquet with Aesthetic Letter</title>
+  <title>Navy Blue Flower Bouquet with Aesthetic Letter</title>
   <style>
     body {
       margin: 0;
@@ -78,7 +78,7 @@
     }
 
     .rose {
-      fill: #f8f4e3;
+      fill: #001f3f; /* Navy Blue */
     }
 
     .center {
@@ -159,29 +159,49 @@
   <!-- SVG 2D Realistic Bouquet -->
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
     <!-- Stems -->
-    <line x1="100" y1="400" x2="100" y2="500" class="stem" />
-    <line x1="150" y1="400" x2="150" y2="500" class="stem" />
+    <line x1="120" y1="400" x2="120" y2="500" class="stem" />
+    <line x1="160" y1="400" x2="160" y2="500" class="stem" />
     <line x1="200" y1="400" x2="200" y2="500" class="stem" />
-    <line x1="250" y1="400" x2="250" y2="500" class="stem" />
-    <line x1="300" y1="400" x2="300" y2="500" class="stem" />
+    <line x1="240" y1="400" x2="240" y2="500" class="stem" />
+    <line x1="280" y1="400" x2="280" y2="500" class="stem" />
+
+    <!-- Extra Stems for More Flowers -->
+    <line x1="100" y1="400" x2="100" y2="500" class="stem" />
+    <line x1="140" y1="400" x2="140" y2="500" class="stem" />
+    <line x1="180" y1="400" x2="180" y2="500" class="stem" />
+    <line x1="220" y1="400" x2="220" y2="500" class="stem" />
 
     <!-- Greenery -->
     <circle cx="100" cy="220" r="60" class="greenery" />
     <circle cx="200" cy="220" r="60" class="greenery" />
     <circle cx="300" cy="220" r="60" class="greenery" />
 
-    <!-- Roses -->
-    <circle cx="100" cy="220" r="40" class="rose" />
-    <circle cx="200" cy="220" r="40" class="rose" />
-    <circle cx="300" cy="220" r="40" class="rose" />
+    <!-- Tilted Navy Blue Roses -->
+    <g transform="rotate(-5, 100, 220)">
+      <circle cx="100" cy="220" r="40" class="rose" />
+    </g>
+    <g transform="rotate(5, 200, 220)">
+      <circle cx="200" cy="220" r="40" class="rose" />
+    </g>
+    <g transform="rotate(-10, 300, 220)">
+      <circle cx="300" cy="220" r="40" class="rose" />
+    </g>
+    <g transform="rotate(15, 120, 240)">
+      <circle cx="120" cy="240" r="40" class="rose" />
+    </g>
+    <g transform="rotate(-15, 220, 240)">
+      <circle cx="220" cy="240" r="40" class="rose" />
+    </g>
 
-    <circle cx="120" cy="240" r="40" class="rose" />
-    <circle cx="220" cy="240" r="40" class="rose" />
-    <circle cx="320" cy="240" r="40" class="rose" />
-
-    <circle cx="80" cy="240" r="40" class="rose" />
-    <circle cx="180" cy="240" r="40" class="rose" />
-    <circle cx="280" cy="240" r="40" class="rose" />
+    <g transform="rotate(10, 80, 240)">
+      <circle cx="80" cy="240" r="40" class="rose" />
+    </g>
+    <g transform="rotate(-10, 180, 240)">
+      <circle cx="180" cy="240" r="40" class="rose" />
+    </g>
+    <g transform="rotate(5, 280, 240)">
+      <circle cx="280" cy="240" r="40" class="rose" />
+    </g>
 
     <!-- Rose Centers -->
     <circle cx="100" cy="220" r="20" class="center" />
