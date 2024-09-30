@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navy Blue Flower Bouquet with Aesthetic Letter</title>
+  <title>Flower Bouquet with 5-Petal Flowers</title>
   <style>
     body {
       margin: 0;
@@ -74,11 +74,11 @@
     }
 
     .greenery {
-      fill: #333; /* Darker greenery to match navy blue */
+      fill: #333; /* Darker greenery */
     }
 
-    .rose {
-      fill: #001f3f; /* Navy Blue */
+    .petal {
+      fill: #001f3f; /* Navy Blue Petals */
     }
 
     .center {
@@ -118,64 +118,88 @@
   <!-- SVG 2D Realistic Bouquet -->
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
     <!-- Stems -->
-    <line x1="120" y1="400" x2="120" y2="550" class="stem" />
-    <line x1="160" y1="400" x2="160" y2="550" class="stem" />
-    <line x1="200" y1="400" x2="200" y2="550" class="stem" />
-    <line x1="240" y1="400" x2="240" y2="550" class="stem" />
-    <line x1="280" y1="400" x2="280" y2="550" class="stem" />
-    <line x1="100" y1="400" x2="100" y2="550" class="stem" />
-    <line x1="140" y1="400" x2="140" y2="550" class="stem" />
-    <line x1="180" y1="400" x2="180" y2="550" class="stem" />
-    <line x1="220" y1="400" x2="220" y2="550" class="stem" />
+    <line x1="150" y1="380" x2="150" y2="520" class="stem" />
+    <line x1="200" y1="380" x2="200" y2="520" class="stem" />
+    <line x1="250" y1="380" x2="250" y2="520" class="stem" />
+    <line x1="180" y1="380" x2="180" y2="520" class="stem" />
+    <line x1="220" y1="380" x2="220" y2="520" class="stem" />
+    <line x1="130" y1="380" x2="130" y2="520" class="stem" />
+    <line x1="270" y1="380" x2="270" y2="520" class="stem" />
 
-    <!-- Greenery (Darker to Match Navy) -->
-    <circle cx="100" cy="220" r="60" class="greenery" />
-    <circle cx="200" cy="220" r="60" class="greenery" />
-    <circle cx="300" cy="220" r="60" class="greenery" />
-
-    <!-- Tilted Navy Blue Roses -->
-    <g transform="rotate(-10, 100, 220)">
-      <circle cx="100" cy="220" r="40" class="rose" />
+    <!-- Tilted Flowers with 5 Petals -->
+    <!-- Flower 1 -->
+    <g transform="translate(130, 150) rotate(-10)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
     </g>
-    <g transform="rotate(10, 200, 220)">
-      <circle cx="200" cy="220" r="40" class="rose" />
-    </g>
-    <g transform="rotate(-15, 300, 220)">
-      <circle cx="300" cy="220" r="40" class="rose" />
-    </g>
-
-    <!-- Additional 8 Tilted Flowers -->
-    <g transform="rotate(15, 120, 240)">
-      <circle cx="120" cy="240" r="40" class="rose" />
-    </g>
-    <g transform="rotate(-15, 220, 240)">
-      <circle cx="220" cy="240" r="40" class="rose" />
-    </g>
-    <g transform="rotate(10, 80, 240)">
-      <circle cx="80" cy="240" r="40" class="rose" />
-    </g>
-    <g transform="rotate(-10, 180, 240)">
-      <circle cx="180" cy="240" r="40" class="rose" />
-    </g>
-    <g transform="rotate(5, 280, 240)">
-      <circle cx="280" cy="240" r="40" class="rose" />
+    
+    <!-- Flower 2 -->
+    <g transform="translate(200, 180) rotate(5)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
     </g>
 
-    <!-- New Extra Flowers for a Fuller Bouquet -->
-    <g transform="rotate(7, 160, 260)">
-      <circle cx="160" cy="260" r="40" class="rose" />
-    </g>
-    <g transform="rotate(-7, 260, 260)">
-      <circle cx="260" cy="260" r="40" class="rose" />
+    <!-- Flower 3 -->
+    <g transform="translate(260, 160) rotate(-5)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
     </g>
 
-    <!-- Rose Centers (Gold) -->
-    <circle cx="100" cy="220" r="20" class="center" />
-    <circle cx="200" cy="220" r="20" class="center" />
-    <circle cx="300" cy="220" r="20" class="center" />
+    <!-- Flower 4 -->
+    <g transform="translate(160, 200) rotate(-15)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
+    </g>
+
+    <!-- Flower 5 -->
+    <g transform="translate(230, 210) rotate(10)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
+    </g>
+
+    <!-- Flower 6 -->
+    <g transform="translate(120, 250) rotate(-5)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
+    </g>
+
+    <!-- Flower 7 -->
+    <g transform="translate(260, 250) rotate(15)">
+      <circle cx="0" cy="0" r="15" class="center"/>
+      <circle cx="-30" cy="-10" r="20" class="petal"/>
+      <circle cx="30" cy="-10" r="20" class="petal"/>
+      <circle cx="-15" cy="-40" r="20" class="petal"/>
+      <circle cx="15" cy="-40" r="20" class="petal"/>
+      <circle cx="0" cy="-60" r="20" class="petal"/>
+    </g>
 
     <!-- Paper Wrapping (Connected with Flowers) -->
-    <polygon points="50,400 350,400 200,550" class="wrap" />
+    <polygon points="50,380 350,380 200,530" class="wrap" />
+
   </svg>
 
   <!-- Toggle message visibility -->
