@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rose Bouquet with Aesthetic Letter</title>
+  <title>Realistic Bouquet with Aesthetic Letter</title>
   <style>
     body {
       margin: 0;
@@ -23,7 +23,7 @@
       bottom: 50px;
       right: 80px;
       cursor: pointer;
-      width: 100px;
+      width: 120px;
       height: 80px;
       background-color: white;
       border: 2px solid #d4af37;
@@ -68,9 +68,21 @@
     /* SVG Style */
     svg {
       position: absolute;
-      left: 0;
-      bottom: 0;
-      transform: rotate(-20deg); /* Rotate the bouquet for a side position */
+      left: 50px;
+      bottom: 100px;
+      transform: rotate(-20deg); /* Rotate the bouquet for a natural side position */
+    }
+
+    .greenery {
+      fill: #4CAF50;
+    }
+
+    .rose {
+      fill: #f8f4e3;
+    }
+
+    .center {
+      fill: #d4af37;
     }
   </style>
 </head>
@@ -134,33 +146,30 @@
     </p>
   </div>
 
-  <!-- SVG 2D Flower Bouquet -->
+  <!-- SVG 2D Realistic Bouquet -->
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
-    <!-- Stems -->
-    <line x1="100" y1="500" x2="100" y2="250" stroke="green" stroke-width="5" />
-    <line x1="200" y1="500" x2="200" y2="250" stroke="green" stroke-width="5" />
-    <line x1="300" y1="500" x2="300" y2="250" stroke="green" stroke-width="5" />
+    <!-- Greenery -->
+    <circle cx="100" cy="220" r="60" class="greenery" />
+    <circle cx="200" cy="220" r="60" class="greenery" />
+    <circle cx="300" cy="220" r="60" class="greenery" />
 
-    <!-- Roses (Red) -->
-    <circle cx="100" cy="220" r="40" fill="red" />
-    <circle cx="120" cy="240" r="40" fill="red" />
-    <circle cx="80" cy="240" r="40" fill="red" />
-    <circle cx="100" cy="260" r="40" fill="red" />
-    
-    <circle cx="200" cy="220" r="40" fill="red" />
-    <circle cx="220" cy="240" r="40" fill="red" />
-    <circle cx="180" cy="240" r="40" fill="red" />
-    <circle cx="200" cy="260" r="40" fill="red" />
+    <!-- Roses -->
+    <circle cx="100" cy="220" r="40" class="rose" />
+    <circle cx="200" cy="220" r="40" class="rose" />
+    <circle cx="300" cy="220" r="40" class="rose" />
 
-    <circle cx="300" cy="220" r="40" fill="red" />
-    <circle cx="320" cy="240" r="40" fill="red" />
-    <circle cx="280" cy="240" r="40" fill="red" />
-    <circle cx="300" cy="260" r="40" fill="red" />
+    <circle cx="120" cy="240" r="40" class="rose" />
+    <circle cx="220" cy="240" r="40" class="rose" />
+    <circle cx="320" cy="240" r="40" class="rose" />
 
-    <!-- Rose Centers (Dark Red) -->
-    <circle cx="100" cy="240" r="20" fill="darkred" />
-    <circle cx="200" cy="240" r="20" fill="darkred" />
-    <circle cx="300" cy="240" r="20" fill="darkred" />
+    <circle cx="80" cy="240" r="40" class="rose" />
+    <circle cx="180" cy="240" r="40" class="rose" />
+    <circle cx="280" cy="240" r="40" class="rose" />
+
+    <!-- Rose Centers -->
+    <circle cx="100" cy="220" r="20" class="center" />
+    <circle cx="200" cy="220" r="20" class="center" />
+    <circle cx="300" cy="220" r="20" class="center" />
   </svg>
 
   <!-- Toggle message visibility -->
