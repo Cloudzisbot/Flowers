@@ -3,233 +3,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Natural Flower Bouquet with Bloom Effect</title>
+    <title>SVG Rose Bouquet</title>
     <style>
         body {
-            background-color: #f0f0f0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
+            background-color: #f5f5f5;
         }
-
-        .bouquet-container {
-            position: relative;
-            width: 500px;
-            height: 600px;
-            overflow: hidden;
+        svg {
+            border: 2px solid #ccc;
+            background-color: #fff;
         }
-
-        .message {
-            display: none;
-            position: absolute;
-            top: 80px;
-            left: 20px;
-            width: 300px;
-            padding: 15px;
-            background-color: #fffbe6;
-            border: 2px solid #d4af37;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .letter-inside {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-        }
-
-        .letter-inside svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .bouquet-wrap {
-            position: absolute;
-            bottom: 0;
-            width: 450px;
-            height: 150px;
-            background: linear-gradient(135deg, #d8bfd8, #8a2be2);
-            border-radius: 50%;
-        }
-
-        /* Blooming animation */
-        .flower {
-            transform-origin: center;
-            animation: bloom 2s ease-out forwards;
-            transform: scale(0); /* Starts small, then blooms */
-        }
-
-        @keyframes bloom {
-            to {
-                transform: scale(1);
-            }
-        }
-
     </style>
 </head>
 <body>
 
-    <div class="bouquet-container">
-        <!-- Letter icon -->
-        <div class="letter-inside" id="letter">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <path d="M20,4H4C2.9,4,2.01,4.9,2.01,6L2,18c0,1.1,0.9,2,2,2h16c1.1,0,2-0.9,2-2V6C22,4.9,21.1,4,20,4z M20,6l-8,5L4,6H20z M4,18V8l8,5 l8-5v10H4z"/>
-            </svg>
-        </div>
+    <!-- SVG Bouquet -->
+    <svg width="400" height="600" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
 
-        <div class="message" id="message">
-            <p>To the Love of My Life,</p>
-            <p>
-                There are moments in life when everything changes, when you meet someone who makes you feel like the luckiest person alive. For me, that moment was the day I met you. From the very first time I saw you, I knew there was something special about you—something that made my heart skip a beat and the world seem brighter. It feels like everything in my life has led up to this moment, and I can’t believe how lucky I am to have you by my side.
-            </p>
-            <p>
-                Every day with you is a blessing, and I can’t help but feel overwhelming gratitude for your presence in my life. I never knew it was possible to feel so deeply for someone until I met you. You have a way of lighting up even my darkest days. Whether it’s your smile, your laugh, or the way you care so deeply about the people around you, everything about you is magic. I cherish every single moment we spend together, and I find myself constantly thinking about how fortunate I am to share my life with you.
-            </p>
-            <p>
-                On this special day, your birthday, I want to take a moment to tell you just how much you mean to me. Although this is the first birthday we’re celebrating together, it feels like we’ve known each other for a lifetime. I can’t wait to celebrate many more birthdays, and all the incredible moments in between. I want to be there for you for all the special days, the ordinary days, and every single day in between for the rest of our lives.
-            </p>
-            <p>
-                I know I don’t say it often enough, but I am so deeply in love with you. Every time I look at you, I am reminded of how lucky I am. You have brought so much love and joy into my life that it feels like I’m living in a dream. I find myself constantly in awe of you—your kindness, your beauty, your intelligence, your strength. You inspire me to be a better person, and I can’t imagine a future without you in it. The more I get to know you, the more I fall in love with every little thing about you.
-            </p>
-            <p>
-                It’s hard to put into words just how much you mean to me because no words could ever capture the depth of my feelings. But I want you to know that I will spend the rest of my life showing you just how much I love you. From the way you look at me to the way you touch my hand, you make me feel safe, loved, and appreciated. You are my home, my heart, my everything.
-            </p>
-            <p>
-                I know this is just the beginning of our journey together, and I can’t wait to see where life takes us. There is so much I want to experience with you—so many adventures, so many milestones, so many quiet moments of pure happiness. I want to be there for all of it, for every smile and every tear, for every victory and every challenge. I want to be your partner in every sense of the word, to support you, to love you, and to cherish you through all the ups and downs that life throws our way.
-            </p>
-            <p>
-                I often think about the future and all the birthdays we’ll celebrate together. I imagine waking up next to you year after year, excited to make your special day as wonderful as you make every day of my life. I want to grow old with you, to share in all of life’s joys and sorrows, to be your constant source of love and support. I want to spend every day reminding you of how much you mean to me and how incredibly loved you are.
-            </p>
-            <p>
-                I am so thankful for you—for your love, your laughter, your presence in my life. You have made me the happiest I’ve ever been, and I don’t ever want to take that for granted. Every time I look at you, I am reminded of how much I have to be grateful for. I am grateful for your patience, for the way you understand me even when I don’t understand myself. I am grateful for your kindness, for the way you treat others with so much respect and compassion. I am grateful for your beauty, both inside and out, and the way it radiates through everything you do.
-            </p>
-            <p>
-                I know that relationships aren’t always easy, but I want you to know that I am committed to you, to us. I will always be here for you, no matter what. I will always fight for us and for the love that we share. I promise to never take you for granted, to always appreciate the love and happiness you bring into my life. I promise to be there for you through the good times and the bad, to support you in all of your dreams and to be your biggest cheerleader.
-            </p>
-            <p>
-                As we celebrate this birthday together, I want you to know that this is just the first of many. I want to be by your side for all of your birthdays, for all of the special moments in your life. I want to grow with you, to learn with you, to build a life together that is filled with love, joy, and adventure. You make life so much more beautiful, and I can’t wait to see what the future holds for us.
-            </p>
-            <p>
-                There’s a lot I could say about the future—about all the dreams I have for us, all the plans I want to make, all the places I want to explore with you. But for now, I want to focus on the present, on this moment, on you. I want you to know that right here, right now, I am happier than I’ve ever been because I get to share this life with you.
-            </p>
-            <p>
-                You are the love of my life, and I want to spend every single day making sure you know that. I want to remind you every morning, every night, and every moment in between of how much you mean to me. I want to give you the love you deserve, to make sure that you always feel cherished, valued, and adored.
-            </p>
-            <p>
-                So, on this special day, I want to celebrate you—everything that makes you who you are. I want to celebrate your kindness, your beauty, your intelligence, your heart. I want to celebrate the love that we share and the future that we’re building together. I want to celebrate all of the amazing things you’ve accomplished and all of the incredible things that are yet to come.
-            </p>
-            <p>
-                You are the best thing that has ever happened to me, and I am so grateful for you. Thank you for choosing me, for loving me, for being by my side. Thank you for making my life so much more beautiful and for giving me something to look forward to every single day. Thank you for being you, and for letting me be a part of your life.
-            </p>
-            <p>
-                As we celebrate your birthday today, I want you to know that I will always be here for you, that I will always love you, that I will always be grateful for you. I can’t wait to celebrate many more birthdays with you, to create more memories, to share more laughter, and to continue building a life together that is filled with love, happiness, and adventure.
-            </p>
-            <p>
-                Tantum te amo et te amabo usque ad mortem usque ad nos.
-            </p>
-        </div>
+        <!-- Stems -->
+        <line x1="150" y1="500" x2="150" y2="300" stroke="green" stroke-width="4"/>
+        <line x1="250" y1="500" x2="250" y2="300" stroke="green" stroke-width="4"/>
+        <line x1="200" y1="500" x2="200" y2="320" stroke="green" stroke-width="4"/>
 
-        <!-- 3D Natural Flower Bouquet using SVG -->
-        <svg class="rose-bouquet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600">
-            <!-- Create gradients for petals and stems -->
-            <defs>
-                <!-- Red gradient for rose petals -->
-                <radialGradient id="roseGradientRedNatural" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,70,70);stop-opacity:1" />
-                    <stop offset="90%" style="stop-color:rgb(150,30,30);stop-opacity:1" />
-                </radialGradient>
+        <!-- Leaves -->
+        <ellipse cx="160" cy="400" rx="30" ry="15" fill="darkgreen"/>
+        <ellipse cx="240" cy="400" rx="30" ry="15" fill="darkgreen"/>
+        <ellipse cx="190" cy="450" rx="30" ry="15" fill="darkgreen"/>
+        <ellipse cx="210" cy="450" rx="30" ry="15" fill="darkgreen"/>
 
-                <!-- Pink gradient for rose petals -->
-                <radialGradient id="roseGradientPinkNatural" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,160,170);stop-opacity:1" />
-                    <stop offset="90%" style="stop-color:rgb(240,120,150);stop-opacity:1" />
-                </radialGradient>
+        <!-- Rose 1 -->
+        <circle cx="150" cy="280" r="30" fill="red"/>
+        <path d="M150,250 
+                 Q160,260 150,270 
+                 Q140,260 150,250 
+                 Z" fill="pink"/>
+        <path d="M150,270 
+                 Q160,280 150,290 
+                 Q140,280 150,270 
+                 Z" fill="pink"/>
 
-                <!-- Yellow gradient for rose petals -->
-                <radialGradient id="roseGradientYellowNatural" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" style="stop-color:rgb(255,255,120);stop-opacity:1" />
-                    <stop offset="90%" style="stop-color:rgb(230,180,50);stop-opacity:1" />
-                </radialGradient>
+        <!-- Rose 2 -->
+        <circle cx="250" cy="280" r="30" fill="red"/>
+        <path d="M250,250 
+                 Q260,260 250,270 
+                 Q240,260 250,250 
+                 Z" fill="pink"/>
+        <path d="M250,270 
+                 Q260,280 250,290 
+                 Q240,280 250,270 
+                 Z" fill="pink"/>
 
-                <!-- Green gradient for stems -->
-                <linearGradient id="stemGradientGreenNatural" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(100,205,50);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(30,120,30);stop-opacity:1" />
-                </linearGradient>
+        <!-- Rose 3 -->
+        <circle cx="200" cy="300" r="30" fill="red"/>
+        <path d="M200,270 
+                 Q210,280 200,290 
+                 Q190,280 200,270 
+                 Z" fill="pink"/>
+        <path d="M200,290 
+                 Q210,300 200,310 
+                 Q190,300 200,290 
+                 Z" fill="pink"/>
 
-                <!-- Green gradient for leaves -->
-                <linearGradient id="leafGradientGreenNatural" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(120,238,120);stop-opacity:1" />
-                    <stop offset="100%" style="stop-color:rgb(30,110,30);stop-opacity:1" />
-                </linearGradient>
-            </defs>
+    </svg>
 
-            <!-- Stems aligned with flowers -->
-            <g>
-                <path d="M100 380 Q105 500, 100 580" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
-                <path d="M200 380 Q205 500, 200 580" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
-                <path d="M300 380 Q305 500, 300 580" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
-                <path d="M150 380 Q155 500, 150 580" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
-                <path d="M250 380 Q255 500, 250 580" stroke="url(#stemGradientGreenNatural)" stroke-width="6" fill="none"/>
-            </g>
-
-            <!-- First natural rose connected to stem with bloom effect -->
-            <g class="flower">
-                <ellipse cx="100" cy="360" rx="20" ry="35" fill="url(#roseGradientRedNatural)" />
-                <ellipse cx="100" cy="345" rx="18" ry="25" fill="url(#roseGradientRedNatural)" />
-            </g>
-
-            <!-- Second natural rose connected to stem with bloom effect -->
-            <g class="flower">
-                <ellipse cx="200" cy="360" rx="20" ry="35" fill="url(#roseGradientPinkNatural)" />
-                <ellipse cx="200" cy="345" rx="18" ry="25" fill="url(#roseGradientPinkNatural)" />
-            </g>
-
-            <!-- Third natural rose connected to stem with bloom effect -->
-            <g class="flower">
-                <ellipse cx="300" cy="360" rx="20" ry="35" fill="url(#roseGradientYellowNatural)" />
-                <ellipse cx="300" cy="345" rx="18" ry="25" fill="url(#roseGradientYellowNatural)" />
-            </g>
-
-            <!-- Fourth flower with regular petals (non-rose) with bloom effect -->
-            <g class="flower">
-                <circle cx="150" cy="360" r="20" fill="yellow" />
-                <circle cx="150" cy="360" r="10" fill="orange" />
-            </g>
-
-            <!-- Fifth flower with regular petals (non-rose) with bloom effect -->
-            <g class="flower">
-                <circle cx="250" cy="360" r="20" fill="lightblue" />
-                <circle cx="250" cy="360" r="10" fill="purple" />
-            </g>
-
-            <!-- Natural Leaves with asymmetry -->
-            <g>
-                <path d="M90 380 C80 370, 120 370, 110 390 Q100 405, 90 380" fill="url(#leafGradientGreenNatural)" />
-                <path d="M190 380 C180 370, 220 370, 210 390 Q200 405, 190 380" fill="url(#leafGradientGreenNatural)" />
-                <path d="M290 380 C280 370, 320 370, 310 390 Q300 405, 290 380" fill="url(#leafGradientGreenNatural)" />
-                <path d="M140 380 C130 370, 170 370, 160 390 Q150 405, 140 380" fill="url(#leafGradientGreenNatural)" />
-                <path d="M240 380 C230 370, 270 370, 260 390 Q250 405, 240 380" fill="url(#leafGradientGreenNatural)" />
-            </g>
-
-        </svg>
-
-        <!-- Wrapping paper at the base -->
-        <div class="bouquet-wrap"></div>
-    </div>
-
-    <script>
-        document.getElementById("letter").addEventListener("click", function() {
-            const message = document.getElementById("message");
-            message.style.display = message.style.display === "block" ? "none" : "block";
-        });
-    </script>
 </body>
 </html>
